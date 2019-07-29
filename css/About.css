@@ -1,0 +1,141 @@
+body{
+    
+    background-color:white;
+    height:100%;
+    margin:0 auto;
+}
+
+.slide-item{
+    display:none;
+}
+h2{
+    font-size:80px;
+    font-weight:400px;
+    text-align: center;
+    font-family:"STXinwei";
+}
+p{
+    font-size:27px;
+    line-height:40px;
+    font-weight:40;
+}
+#logo {
+    font-size:50px;
+    font-weight: 600;
+    color: #8c888b;
+    background: -webkit-linear-gradient(45deg, #70f7fe, #DA70D6, #fdefac, #bfb5dd, #bed5f5);
+    -moz-linear-gradient(45deg, #70f7fe, #fbd7c6, #fdefac, #bfb5dd, #bed5f5);
+    -ms-linear-gradient(45deg, #70f7fe, #fbd7c6, #fdefac, #bfb5dd, #bed5f5);
+    color: transparent;
+    -webkit-background-clip: text;
+    animation: ran 10s linear infinite; 
+    font-family:"STXinwei";}
+#logo1{
+    background: -webkit-linear-gradient(45deg, #70f7fe, #DA70D6, #fdefac, #bfb5dd, #bed5f5);
+}
+#span_logo {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    font-family: "Quicksand", sans-serif;
+    font-size: 250%;
+  }
+  .logo {
+    height: 23vh;
+    font-weight: 600;
+  }
+  
+    
+.Flex-color-Special
+ {
+    text-shadow: 0 0 10px #fff,
+               0 0 20px  #fff,
+               0 0 30px  #fff,
+               0 0 40px  #00c0ef,
+               0 0 70px  #00c0ef,
+               0 0 80px  #00c0ef,
+               0 0 100px #00c0ef,
+               0 0 150px #00c0ef;
+  }
+ 
+ 
+@-webkit-keyframes fadeIn {
+0% {
+opacity: 0; /*初始状态 透明度为0*/
+}
+50% {
+opacity: 0.5; /*中间状态 透明度为0*/
+}
+100% {
+opacity: 1; /*结尾状态 透明度为1*/
+}
+}
+ 
+.Flex-fadeIn
+{
+-webkit-animation-name: fadeIn; /*动画名称*/
+-webkit-animation-duration: 7s; /*动画持续时间*/
+-webkit-animation-iteration-count: 1; /*动画次数 infinite 为无限 否则就是具体次数*/
+-webkit-animation-delay: 0s;
+ /*延迟时间*/}
+
+h3{
+    font-size:30px;
+    font-family:Arial,Helvetica,sans-serif;
+    font-weight:1;
+    text-align: center;
+}
+h4{
+    text-align: center;
+    font-size:40px;
+    font-weight:500;
+}
+.slide-item.active {
+    display: block;
+}
+#container{
+    margin:0 auto;
+    width:1100px;
+    box-align: center;
+}
+.row{
+    margin-left:-5px;
+    margin-right: -5px;
+}
+.slide-container{
+    font-size:2;
+}
+.section-title{
+    letter-spacing:3px;
+    position: relative;
+}
+.text{
+    text-transform:none;
+}
+.wrapper {
+    display: flex;
+}
+
+.list {
+    width: 600px;
+}
+
+.context {
+    flex: 1;
+    height: 300px;
+
+}
+.list1{
+    width:750px;
+}
+.context1{
+    flex:1;
+    height:250px;
+}
+#awd-site-logo h1 > a {
+    display: inline-block;
+}
+a, a > * {
+    color: inherit;
+    text-decoration: none;
+}
