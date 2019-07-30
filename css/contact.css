@@ -1,0 +1,240 @@
+.main{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  margin: 0;
+}
+.a1{
+  height: 230px;
+  width: 50%;
+}
+.a2{
+  width: 50%;
+}
+.a3{
+  height: 150px;
+  width: 100%;
+  font-size: 100px;
+  padding-left: 200px;
+  font-weight: 500;
+}
+.a4{
+  height: 210px;
+  width: 100%;
+  font-size: 30px;
+  font-family: "仿宋";
+  padding-left: 250px;
+  line-height: 120px;
+  color: #5a5a5a;
+}
+.a5{
+  
+  height: 135px;
+  width: 100%;
+  font-family: "楷体";
+  font-size: 22px;
+  color: #636363;
+  padding-left: 210px;
+}
+.b1{
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-content: flex-start;
+  flex-direction: row;
+  padding-left: 250px;
+}
+.b2{
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-content: flex-start;
+  flex-direction: row;
+  padding-left: 250px;
+}
+.b3{
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-content: flex-start;
+  flex-direction: row;
+  padding-left: 250px;
+}
+.b4{
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-content: flex-start;
+  flex-direction: row;
+  padding-left: 250px;
+}
+.b5{
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-content: flex-start;
+  flex-direction: row;
+  padding-left: 250px;
+}
+.b6{
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-content: flex-start;
+  flex-direction: row;
+  padding-left: 250px;
+}
+.b7{
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-content: flex-start;
+  flex-direction: row;
+}
+.c1{
+  font-size: 25px;
+  font-family: "宋体";
+}
+.c2{
+  padding-left: 120px;
+}
+.c20{
+  padding-left: 70px
+}
+.c3{
+  padding-left: 550px;
+}
+input{
+  height: 40px;
+  width: 650px;
+  font-size: 25px;
+  font-family: "仿宋";
+}
+select{
+  height: 40px;
+  width: 650px;
+  font-size: 30px;
+  font-family: "仿宋";
+  text-align: center;
+  text-align-last: center;
+}
+button{
+  height: 70px;
+  width:400px;
+  font-size: 40px;
+  line-height: 30px;
+  font-family: "楷体";
+  background: black;
+}
+
+.a-fadein{
+  -webkit-animation:fadein 1s forwards linear;
+  -moz-animation:fadein 1s forwards linear;
+  -ms-animation:fadein 1s forwards linear;
+  animation: fadein 1s forwards linear;
+}
+@-webkit-keyframes fadein{
+    0%{opacity:0;}
+    100%{opacity:1;}
+}
+@-moz-keyframes fadein{
+    0%{opacity:0;}
+    100%{opacity:1;}
+}
+@-ms-keyframes fadein{
+    0%{opacity:0;}
+    100%{opacity:1;}
+}
+@keyframes fadein{
+    0%{opacity:0;}
+    100%{opacity:1;}
+}
+
+
+.colorful {                                   /*颜色跑马灯*/
+  display: block;
+  width: 400px;
+  height: 150px;
+  background-image: -webkit-linear-gradient(left, #3498db, #f47920 10%, #d71345 20%, #f7acbc 30%,
+  #ffd400 40%, #3498db 50%, #f47920 60%, #d71345 70%, #f7acbc 80%, #ffd400 90%, #3498db);
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-size: 200% 100%;
+  animation: colorful-animation 4s infinite linear;
+}
+@keyframes colorful-animation {
+  0% {
+      background-position: 0 0;
+  }
+  100% {
+      background-position: -100% 0;
+  }
+}
+
+.block{
+  color: #ffffff;
+  position: relative;
+  z-index: 1;
+}
+.block::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #636363;
+  transform-origin: center right;
+  transform: scaleX(0);
+  transition: transform 0.2s linear;
+}
+.block:hover {
+  cursor: pointer;
+}
+.block:hover::before {
+  transform-origin: center left;
+  transform: scaleX(1);
+}
+
+
+.scribe{
+  color: #595959;
+  position: relative;
+  z-index: 1;
+}
+.scribe::before,
+.scribe::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: #262626;
+  transform: scaleX(0);
+  transition: transform 0.2s ease-in-out;
+}
+.scribe::before {
+  top: 0;
+  transform-origin: center right;
+}
+.scribe::after {
+  bottom: 0;
+  transform-origin: center left;
+}
+.scribe:hover {
+  cursor: pointer;
+}
+.scribe:hover::before {
+  transform-origin: center left;
+  transform: scaleX(1);
+}
+.scribe:hover::after {
+  transform-origin: center right;
+  transform: scaleX(1);
+}
