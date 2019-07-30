@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="../css/Contact.css">
+	<link rel="stylesheet" type="text/css" href="../css/Menu.css">
+
+</head>
+<body style="background-color: #EEE5DE">
+	<div id="page1">
+		<div >
+			<h1 class="h1">CANTACT US</h1>
+			<h2 id="contact">联系我们</h2>
+			<div id="con">
+				<p><strong>QQ: </strong>3159742702</p>
+				<p><strong>WeChat: </strong>南邮计软网安院科协</p>
+				<p><strong>E-mail: </strong>njupt.sacc@outlook.com</p>
+				<p><strong>Github: </strong>南京邮电大学计算机软件学院网络空间安全学院科学与技术协会</p>
+			</div>
+		</div>
+		<div id="circle"></div>	
+		<div id="beside">
+			© 2019 Science Association of Computer College All Rights Reserved.
+		</div>
+
+	</div>
+
+
+	<div id="page2">
+		<div id="line11">
+			<h2 class="me-h2"><a href="">主页</a></h2><label class="me-label">Home</label>
+			<h2 class="me-h2"><a href="">申请</a></h2><label class="me-label">Application</label>
+			<h2 class="me-h2"><a href="">联系我们</a></h2><label class="me-label">Contact Us</label>
+		</div>
+		<div id="line22">
+			<h2 class="me-h2"><a href="">办公室</a></h2><label class="me-label">Office</label>
+			<h2 class="me-h2"><a href="">技术部 -></a></h2><label class="me-label">Technical Section</label>
+			<h2 class="me-h2"><a href="">新媒体</a></h2><label class="me-label">New Media</label>
+		</div>
+		<!--div id="line33">
+			<div id="li1"></div>
+			<div id="li2"></div>
+			<div id="li3"></div>
+			<div id="li4"></div>
+			<div id="li5"></div>	
+		</div-->
+		<div id="line44" class="me-h2">
+			<h2><a href="">安全组</a></h2>
+			<h2><a href="">游戏组</a></h2>
+			<h2><a href="">前端开发组</a></h2>
+			<h2><a href="">后端开发组</a></h2>
+			<h2><a href="">算法组</a></h2>
+			<h2><a href="">python组</a></h2>
+		</div>
+		
+	</div>
+	
+
+	<button id="button" class="menu button" onclick="menuIconRotate()">
+		<span class="spin"></span>
+		<span class="spin"></span>
+		<span class="spin"></span>
+		<span class="spin"></span>
+	</button>
+	<script>
+		var isClick = false;
+		var spinDom = document.querySelectorAll(".spin");
+		console.log(spinDom);
+		function menuIconRotate () {
+			isClick = !isClick;
+			var page2=document.getElementById("page2");				
+			var page1=document.getElementById("page1");
+			console.log(isClick);
+			if (isClick) {
+				spinDom[0].style.opacity = 0;
+				spinDom[3].style.opacity = 0;
+				spinDom[1].style.transform = 'rotate(45deg)';
+				spinDom[2].style.transform = 'rotate(-45deg)';
+
+				if( page1.style.visibility!="hidden"){
+					page2.className="menu-display";
+				}					 
+			}				
+			else {
+				setTimeout(function () {
+					spinDom[0].style.opacity = 1;
+					spinDom[3].style.opacity = 1;
+				}, 200)
+				spinDom[1].style.transform = 'rotate(0deg)';
+				spinDom[2].style.transform = 'rotate(0deg)';
+				page2.className="menu-disappear";
+			}
+		}
+
+
+	</script>
+
+	
+</body>
