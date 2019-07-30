@@ -7,83 +7,126 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Home</title>
   <link rel="stylesheet" href="../css/iconfont.css">
-  <link rel="stylesheet" href="../css/Home.css">
   <link rel="stylesheet" href="../css/Quiksand.css">
+  <link rel="stylesheet" href="../css/Contact.css">
+  <link rel="stylesheet" href="../css/Menu.css">
+  <link rel="stylesheet" href="../css/Home.css">
+  <!-- <link href='http://cdn.repository.webfont.com/webfonts/nomal/132122/46888/5d3ffb70f629d80f6cc32855.css' rel='stylesheet' type='text/css' />
+  <link href='http://cdn.repository.webfont.com/webfonts/nomal/132122/46888/5d3ffc38f629d80f6cc32856.css' rel='stylesheet' type='text/css' />
+  <link href='http://cdn.repository.webfont.com/webfonts/nomal/132122/46888/5d3ffd11f629d80f6cc32857.css' rel='stylesheet' type='text/css' />
+  <link href='http://cdn.repository.webfont.com/webfonts/nomal/132122/46888/5d3ffd4ef629d80f6cc32858.css' rel='stylesheet' type='text/css' />
+  <link href='http://cdn.repository.webfont.com/webfonts/nomal/132122/46888/5d3ffd77f629d80f6cc32859.css' rel='stylesheet' type='text/css' /> -->
 </head>
 
 <body>
-  <div class="content">
-    <header>
-      <div class="logo" id="span_logo">
-      <img src="../static/img/logo_副本_副本.png">
-      <span>sacc</span>
-      </div>
-      <button class="roll" onclick="menuIconRotate()">
-        <span class="line"></span>
-        <span class="line"></span>
-        <span class="line"></span>
-        <span class="line"></span>
-      </button>
-      <div id="directory" class="directory" ></div>
-    </header>
-    <div class="inner">
-      <div class="center_area">
-        <div class="title">
-          <div id="logoup">
-            Program with <b>handsome</b> or <b>beautiful</b> senior ? Come and join us !
-          </div>
-          <div class="sacc">
-            <p id="main_logo">SACC</p>
-            <h1 id="under_main_logo">SACC </h1>
-          </div>
-          <div id="quanchen">
-            Science Association of Computer College
-          </div>
+  <button class="roll" onclick="menuIconRotate()">
+    <span class="line"></span>
+    <span class="line"></span>
+    <span class="line"></span>
+    <span class="line"></span>
+  </button>
+  <div id="home">
+    <div class="content">
+      <header>
+        <div class="logo" id="span_logo">
+        <img src="../static/img/logo_副本_副本.png">
+        <span>sacc</span>
         </div>
-        <div class="top_menu_show">
-          <table class="m1">
-            <tr>
-              <td><a href="Home.html" rel="_blank">首页</a>
-                <img class="slash"
-                  src="https://fairway-corp.co.jp/wp-content/themes/fairway-news/common/img/menu_slash.svg" alt=""></td>
-              </td>
-              <td><a href="About.html" rel="_blank">关于</a>
-                <img class="slash"
-                  src="https://fairway-corp.co.jp/wp-content/themes/fairway-news/common/img/menu_slash.svg" alt=""></td>
-              <td><a href="Applyfor.html" rel="_blank">申请</a>
-                <img class="slash"
-                  src="https://fairway-corp.co.jp/wp-content/themes/fairway-news/common/img/menu_slash.svg" alt=""></td>
-              <td><a href="Contact.html" rel="_blank">联系我们</a></td>
-            </tr>
-          </table>
-        </div>
-      </div>
 
+        <div id="directory" class="directory" ></div>
+      </header>
+      <div class="inner">
+        <div class="center_area">
+          <div class="title">
+            <div id="logoup">
+              Program with <b>handsome</b> or <b>beautiful</b> senior ? Come and join us !
+            </div>
+            <div class="sacc">
+              <p id="main_logo">SACC</p>
+              <h1 id="under_main_logo">SACC </h1>
+            </div>
+            <div id="quanchen">
+              Science Association of Computer College
+            </div>
+          </div>
+          <div>
+            <table class="m1">
+              <tr>
+                <td id="shouye"><a href="Home.html" rel="_blank">首页</a>
+                  <img class="slash"
+                    src="https://fairway-corp.co.jp/wp-content/themes/fairway-news/common/img/menu_slash.svg" alt="">
+                </td>
+                <td id="guanyu"><a href="About.html" rel="_blank">关于</a>
+                  <img class="slash"
+                    src="https://fairway-corp.co.jp/wp-content/themes/fairway-news/common/img/menu_slash.svg" alt="">
+                </td>
+                <td id="shenqing"><a href="Applyfor.html" rel="_blank">申请</a>
+                  <img class="slash"
+                    src="https://fairway-corp.co.jp/wp-content/themes/fairway-news/common/img/menu_slash.svg" alt="">
+                </td>
+                <td id="lianxi" onclick="contactShow()">联系我们</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      
+      </div>
+        <div id="beside">
+          ©2019 Science Association of Computer College All Rights Reserved.
+        </div>
+      <footer>
+        <div class="iconfontBox">
+          <span class="iconfont">&#xebb4;</span>
+          <span class="iconfont">&#xe609;</span>
+          <span class="iconfont">&#xf1b4;</span>
+          <span class="iconfont">&#xe667;</span>
+        </div>
+      </footer>   
     </div>
-      <div id="beside">
-        ©2019 Science Association of Computer College All Rights Reserved.
-      </div>
-    <footer>
-      <div class="iconfontBox">
-        <span class="iconfont">&#xebb4;</span>
-        <span class="iconfont">&#xe609;</span>
-        <span class="iconfont">&#xf1b4;</span>
-        <span class="iconfont">&#xe667;</span>
-      </div>
-    </footer>
-
-
-
-    
   </div>
-  <script src="../js/main.js"></script>
-  <script type="text/javascript" src="http://cdn.repository.webfont.com/wwwroot/js/wf/youziku.api.min.js"></script>
+  <div id="page2">
+    <div id="line11">
+      <h2 class="me-h2"><a href="">主页</a></h2><label class="me-label">Home</label>
+      <h2 class="me-h2"><a href="">申请</a></h2><label class="me-label">Application</label>
+      <h2 class="me-h2"><a href="">联系我们</a></h2><label class="me-label">Contact Us</label>
+    </div>
+    <div id="line22">
+      <h2 class="me-h2"><a href="">办公室</a></h2><label class="me-label">Office</label>
+      <h2 class="me-h2"><a href="">技术部 -></a></h2><label class="me-label">Technical Section</label>
+      <h2 class="me-h2"><a href="">新媒体</a></h2><label class="me-label">New Media</label>
+    </div>
+    <div id="line44" class="me-h2">
+      <h2><a href="">安全组</a></h2>
+      <h2><a href="">游戏组</a></h2>
+      <h2><a href="">前端开发组</a></h2>
+      <h2><a href="">后端开发组</a></h2>
+      <h2><a href="">算法组</a></h2>
+      <h2><a href="">python组</a></h2>
+    </div>  
+  </div>
+  <div id="page1">
+    <div >
+      <h1 class="h1">CANTACT US</h1>
+      <h2 id="contact">联系我们</h2>
+      <div id="con">
+        <p><strong>QQ: </strong>3159742702</p>
+        <p><strong>WeChat: </strong>南邮计软网安院科协</p>
+        <p><strong>E-mail: </strong>njupt.sacc@outlook.com</p>
+        <p><strong>Github: </strong>南京邮电大学计算机软件学院网络空间安全学院科学与技术协会</p>
+      </div>
+    </div>
+    <div id="circle"></div>	
+    <div id="beside">
+      © 2019 Science Association of Computer College All Rights Reserved.
+    </div>
+  </div>
+
+  <script type="text/javascript" src="../js/youziku.api.min.js"></script>
   <script type="text/javascript">
-    $webfont.load("body", "39103f2e6e8548e6885108fe66b9d928", "HaTian-JingZhi");
-    /*$webfont.load("#id1,.class1,h1", "39103f2e6e8548e6885108fe66b9d928", "HaTian-JingZhi");*/
-    /*．．．*/
-    $webfont.draw();
+     $webfont.load("body", "8fdfc56cf2d649dc80e9a1abe16982f7", "HaTian-JingZhi");
+     $webfont.draw();
   </script>
+  <script type="text/javascript" src="../js/main.js"></script>
 </body>
 
 </html>
