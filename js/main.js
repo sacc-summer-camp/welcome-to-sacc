@@ -1,4 +1,5 @@
-let isClickContact = false;
+let isClickContact                  =                  false;
+let isClick                         =                  false;
 
 window.onload = function () {
   console.log("123");
@@ -14,7 +15,6 @@ var saccAnimation = function () {
 }
 
 var menuIconRotate = function () {
-  var isClick = false;
   var rollDom = document.querySelectorAll(".line");
   isClick = !isClick;
   var page2=document.getElementById("page2");				
@@ -39,9 +39,8 @@ var menuIconRotate = function () {
 }
 
 var contactShow = function () {
-  console.log("啊啊啊啊")
   const page1 = document.querySelector("#page1");
   isClickContact = !isClickContact;
   console.log(isClickContact);
-  page1.style.display = isClickContact ? 'block' : 'none';
+  page1.style.transform = isClickContact ? 'translateX(0)' : 'translateX(-100%)'
 }

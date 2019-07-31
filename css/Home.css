@@ -10,6 +10,8 @@ html{
 body{
   overflow: hidden;
   position: relative;
+  background: linear-gradient(rgb(250, 237, 248), rgb(251, 235, 254));
+  height: 100vh;
 }
 
 #page2{
@@ -19,7 +21,7 @@ body{
   transform: translateY(-200%);
   background-color: white;
   position: absolute;
-  z-index: 4;
+  z-index: 9998;
   width: 100%;
 }
 
@@ -51,19 +53,20 @@ body{
 }
 
 .content {
-  background: linear-gradient(rgb(250, 237, 248), rgb(251, 235, 254));
-  height: 100vh;
   position: relative;
 }
 
 .logo {
   height: 23vh;
   font-weight: 600;
+  position: absolute;
+  z-index: 9999;
 }
 
 .logo img {
   margin-top: 2vh;
   margin-left: 1vw;
+  z-index: 9999;
 }
 
 button{
@@ -99,7 +102,7 @@ button{
 .roll span:nth-of-type(4){top: 13vh;}
 
 .center_area {
-  padding: 2vh 0;
+  padding-top: 24vh;
 }
 
 #logoup{
@@ -196,21 +199,21 @@ td {
   font-size: .3rem;
 }
 
-/* #shouye{
-  font-family:'HaTian-JingZhi1ae71a85602041a';
+#shouye{
+  cursor:pointer
 }
 
 #guanyu{
-  font-family:'HaTian-JingZhi1ae71ec2912041a';
+  cursor:pointer
 }
 
 #shenqing{
-  font-family:'HaTian-JingZhi1ae71dd37e2041a';
+  cursor:pointer
 }
 
 #lianxi{
-  font-family:'HaTian-JingZhi1ae71f63742041a';
-} */
+  cursor:pointer
+}
 
 #span_logo {
   display: inline-block;
@@ -221,20 +224,23 @@ td {
 }
 
 .iconfontBox {
-  padding: 0 6vw 2vw 0;
+  position: absolute;
   opacity: 0; 
   -webkit-animation-name: fadeIn;
- -webkit-animation-duration: 3s; 
- -webkit-animation-iteration-count: 1; 
- -webkit-animation-delay: 0s; 
- animation-fill-mode:forwards;
+  -webkit-animation-duration: 3s; 
+  -webkit-animation-iteration-count: 1; 
+  -webkit-animation-delay: 0s; 
+  animation-fill-mode:forwards;
+  right: 3vw;
+  bottom: 1vh;
+    z-index: 9999;
 }
 
 .iconfont {
   font-size: .21rem;
   cursor: pointer;
   transition: color .5s;
-  padding: 1vw;
+
 }
 .iconfont:hover{
   color: #c7bbc5;
@@ -256,6 +262,7 @@ td {
   -webkit-animation-iteration-count: 1; 
   -webkit-animation-delay: 0s; 
   animation-fill-mode:forwards;
+  z-index: 9999;
 }
 footer {
   display: flex;
@@ -267,28 +274,6 @@ footer {
   right: 0;
   width: 100%
 }
-@media screen and (min-width: 1300px) and (max-width: 1580px) {
-  html{
-    font-size: 135px;
-  }
-}
-@media screen and (min-width: 1581px){
-  html{
-    font-size: 150px;
-  }
-  #quanchen{
-    margin-top: 20vh;
-  }
-  #beside{
-    left: 8vh;
-  }
-  .iconfont {
-    font-size: .18rem;
-  }
-  #span_logo {
-    font-size: 0.38rem;
-}
-}
 @media screen and (max-width: 768px){
   html{
     font-size: 73px;
@@ -299,43 +284,102 @@ footer {
   html{
     font-size: 78px;
   }  
-  #beside{
+   #beside{
     left: 8vh;
   }
   #quanchen{
-    margin-top: 18vh;
-  }
-  #main_logo {
-    font-size: 1.4rem;
-  }
-  #under_main_logo {
-    font-size: 1.4rem;
-  }
-  .iconfont {
-    font-size: .24rem;
-  }
-  .iconfontBox {
-    padding: 0px 6vw 1vw 0;
+    margin-top: 21vh;
   }
   .center_area {
-    padding: 4vh 0;
-  }
-  #logoup{
-    padding-bottom: 1vh;
-  }
-  .m1 {
-    margin-top: 35vh;
-  }
-  td {
-    font-size: .38rem;
+    padding-top: 26vh;
   }
 }
+@media screen and (min-width: 992px) and (max-width: 1300px) {
+  html{
+    font-size: 105px;
+  }
+  #quanchen{
+    margin-top: 22vh;
+  }
+  .center_area {
+    padding-top: 26vh;
+  }
+  #beside{
+    left: 8vh;
+  }
+  .sacc{
+    padding-top: 1vh;
+  }
+  #main_logo {
+    font-size: 1.2rem;
+  }
+  #under_main_logo {
+    font-size: 1.2rem;
+  }
+  .m1 {
+    margin-top: 13vh;
+  }
+}
+@media screen and (min-width: 1300px) and (max-width: 1580px) {
+  html{
+    font-size: 105px;
+  }
+  #quanchen{
+    margin-top: 19vh;
+  }
+  .center_area {
+    padding-top: 28vh;
+  }
+  #beside{
+    left: 7vh;
+  }
+  .sacc{
+    padding-top: 1vh;
+  }
+  #main_logo {
+    font-size: 1.3rem;
+  }
+  #under_main_logo {
+    font-size: 1.3rem;
+  }
+  .m1 {
+    margin-top: 13vh;
+  }
+}
+@media screen and (min-width: 1581px){
+  html{
+    font-size: 140px;
+  }
+  #quanchen{
+    margin-top: 19vh;
+  }
+  #beside{
+    left: 6vh;
+  }
+  .iconfont {
+    font-size: .18rem;
+  }
+  #span_logo {
+    font-size: 0.38rem;
+  }
+  .sacc{
+    padding-top: 2vh;
+  }
+  #main_logo {
+    font-size: 1.3rem;
+  }
+  #under_main_logo {
+    font-size: 1.3rem;
+  }
+}
+  
 
 #page1{
-  display: none;
+  transform: translateX(-100%);
   position: absolute;
   top: 0;
   width: 100%;
   height: 100vh;
   z-index: 6;
+  transition: transform .8s;
 }
