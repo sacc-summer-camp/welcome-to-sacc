@@ -7,128 +7,89 @@
   margin: 0;
 }
 .a1{
-  height: 230px;
+  height: 15vw;
   width: 50%;
 }
 .a2{
   width: 50%;
 }
 .a3{
-  height: 150px;
+  height: 10vw;;
   width: 100%;
-  font-size: 100px;
-  padding-left: 200px;
+  font-size: 6.5vw;;
+  padding-left: 15vw;
   font-weight: 500;
 }
 .a4{
-  height: 210px;
+  height: 16vw;;
   width: 100%;
-  font-size: 30px;
+  font-size: 2.5vw;;
   font-family: "仿宋";
-  padding-left: 250px;
-  line-height: 120px;
+  padding-left: 18vw;
+  line-height: 10vw;;
   color: #5a5a5a;
 }
 .a5{
-  
-  height: 135px;
+  height: 10vw;
   width: 100%;
   font-family: "楷体";
-  font-size: 22px;
+  font-size: 1.5vw;
   color: #636363;
-  padding-left: 210px;
+  padding-left: 16vw;
 }
 .b1{
-  height: 100px;
+  height: 8vw;
   width: 100%;
   display: flex;
   align-content: flex-start;
   flex-direction: row;
-  padding-left: 250px;
+  padding-left: 20vw;
 }
-.b2{
-  height: 100px;
-  width: 100%;
-  display: flex;
-  align-content: flex-start;
-  flex-direction: row;
-  padding-left: 250px;
-}
-.b3{
-  height: 100px;
-  width: 100%;
-  display: flex;
-  align-content: flex-start;
-  flex-direction: row;
-  padding-left: 250px;
-}
-.b4{
-  height: 100px;
-  width: 100%;
-  display: flex;
-  align-content: flex-start;
-  flex-direction: row;
-  padding-left: 250px;
-}
-.b5{
-  height: 100px;
-  width: 100%;
-  display: flex;
-  align-content: flex-start;
-  flex-direction: row;
-  padding-left: 250px;
-}
-.b6{
-  height: 100px;
-  width: 100%;
-  display: flex;
-  align-content: flex-start;
-  flex-direction: row;
-  padding-left: 250px;
-}
+
 .b7{
-  height: 100px;
+  height: 8vw;
   width: 100%;
   display: flex;
   align-content: flex-start;
   flex-direction: row;
   outline: none;
   border: none;
+  
 }
 .c1{
-  font-size: 25px;
+  font-size: 2.7vw;
   font-family: "宋体";
+  padding-top: 2.1vw;
 }
 .c2{
-  padding-left: 120px;
+  padding-left: 8vw;
+  padding-top: 0.8vw;
 }
-.c20{
-  padding-left: 70px
-}
+
 .c3{
-  padding-left: 550px;
+  padding-left: 35vw;
   outline: none;  
   border: none;
 }
 input{
-  height: 40px;
-  width: 650px;
-  font-size: 25px;
+  height: 3vw;
+  width: 45vw;
+  font-size: 1.8vw;
   font-family: "仿宋";
 }
 select{
-  height: 40px;
-  width: 650px;
-  font-size: 30px;
+  height: 3.8vw;
+  width: 45vw;
+  font-size: 1.8vw;
   font-family: "仿宋";
   text-align: center;
   text-align-last: center;
 }
 button{
-  height: 70px;
-  width:400px;
-  font-size: 40px;
-  line-height: 30px;
+  height: 5vw;
+  width:30vw;
+  font-size: 2.5vw;
+  line-height: 2.5vw;
   font-family: "楷体";
   background: black;
 }
@@ -160,7 +121,7 @@ button{
 .colorful {                                   /*颜色跑马灯*/
   display: block;
   width: 400px;
-  height: 150px;
+  height: 10vw;
   background-image: -webkit-linear-gradient(left, #3498db, #f47920 10%, #d71345 20%, #f7acbc 30%,
   #ffd400 40%, #3498db 50%, #f47920 60%, #d71345 70%, #f7acbc 80%, #ffd400 90%, #3498db);
   color: transparent;
@@ -179,7 +140,7 @@ button{
   }
 }
 
-.block{
+.block{                 /*颜色覆盖渐变*/
   color: #ffffff;
   position: relative;
   z-index: 1;
@@ -208,7 +169,7 @@ button{
 }
 
 
-.scribe{
+.scribe{                           /*上下划线*/
   color: #595959;
   position: relative;
   z-index: 1;
@@ -220,7 +181,7 @@ button{
   position: absolute;
   left: 0;
   right: 0;
-  height: 3px;
+  height: 0.2vw;
   background: #262626;
   transform: scaleX(0);
   transition: transform 0.2s ease-in-out;
@@ -244,3 +205,18 @@ button{
   transform-origin: center right;
   transform: scaleX(1);
 }
+
+
+#beside{
+  font-family: "Quicksand", sans-serif;
+  font-size: 60%;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  text-align: center;
+  writing-mode: vertical-rl;
+  left: 5vw;
+  height: 100%;
+}
+
+
