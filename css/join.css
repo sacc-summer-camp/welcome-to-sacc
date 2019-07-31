@@ -92,6 +92,8 @@
   display: flex;
   align-content: flex-start;
   flex-direction: row;
+  outline: none;
+  border: none;
 }
 .c1{
   font-size: 25px;
@@ -105,6 +107,8 @@
 }
 .c3{
   padding-left: 550px;
+  outline: none;  
+  border: none;
 }
 input{
   height: 40px;
@@ -179,6 +183,8 @@ button{
   color: #ffffff;
   position: relative;
   z-index: 1;
+  outline: none;
+  border: none;
 }
 .block::before {
   content: "";
@@ -188,7 +194,7 @@ button{
   bottom: 0;
   left: 0;
   right: 0;
-  background: #636363;
+  background: #B0E0E6;
   transform-origin: center right;
   transform: scaleX(0);
   transition: transform 0.2s linear;
