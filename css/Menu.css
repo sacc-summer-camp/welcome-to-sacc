@@ -2,7 +2,7 @@
 	display: flex;
 	flex-direction: row;
 	position: fixed;
-	top: -800px;
+	top: -120%;
 	width:100%;
 	height: 100%;
 	background-color: white;
@@ -14,8 +14,9 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	font-size:27px;
-	
+	font-size:2.0vw;
+	line-height: 60px;
+
 }
 
 #line22{
@@ -23,18 +24,10 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	font-size: 25px;
-	
+	font-size: 1.8vw;
+	line-height: 60px;
 }
-#line33{
-	width: 30px;
-	height: 420px;
-	display:flex;
-	margin-left: 5%;
-	
-   justify-content: center;
 
-}
 #line44{
 	
 	width: 200px;
@@ -43,7 +36,7 @@
 	flex-direction: column;
 	justify-content: center;
 	line-height: 40px;
-	font-size: 17px;
+	font-size: 1.5vw;
 	
 
 }
@@ -77,11 +70,7 @@ a:hover{
 	color: gray;
 }
 
-@media(max-width: 712px){
-	#line3{
-		height: 480px;
-	}
-}
+
 .block{
 	display: block;
 	width: 35px;
@@ -126,8 +115,19 @@ a:hover{
 	}
 	100%{
 		position: fixed;
-		top:-800px;
+		top:-120%;
 	}  
 }
+
+@media screen and(max-width: 768px){
+ #line11 #line22{
+   	font-size: 11px;
+   }
+   #line44{
+    font-size: 10px;
+   }
+}
+
+
 
 

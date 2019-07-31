@@ -1,92 +1,58 @@
 
 .h1{
-	font-size: 80px;
-	font-weight: 550;
-	padding-top: 5%;
-	margin-bottom: 0;	  
+  font-size: 7vw;
+  font-weight: 520;
+  margin-top: 13vh;
+  margin-bottom: 0;   
 }
 
+
 #contact{
-	font-size: 40px;
-	font-weight: normal;
-	margin-bottom: 80px;
-	height: 100px;
+  font-size: 2vw;
+  font-weight: normal;
+  margin-bottom: 15vh;
+  height: 100px;
 }
 #page1{
-	padding-left: 15%;
-	background-color: #EEE5DE
+  padding-left: 15%;
+  background-color: #EEE5DE
 }
 
 .btn{
-	position: fixed;
-	right:20px;
-	top:20px;
-	width: 90px;
-	height: 90px;
-	background:none;
-	border:none;
-	outline:none;
+  position: fixed;
+  right:20px;
+  top:20px;
+  width: 90px;
+  height: 90px;
+  background:none;
+  border:none;
+  outline:none;
 
 }
-
-
 
 
 .span{
-	display: block;
-	height: 25px;
-	border-style: solid;
-	border-right: none;
-	border-left: none;
-	border-bottom: none;
+  display: block;
+  height: 25px;
+  border-style: solid;
+  border-right: none;
+  border-left: none;
+  border-bottom: none;
 }
 .span:hover{
-	border-style: solid;
-	border-right: none;
-	border-left: none;
-	border-bottom: none;
-	border-color: gray;
-	cursor: pointer;
+  border-style: solid;
+  border-right: none;
+  border-left: none;
+  border-bottom: none;
+  border-color: gray;
+  cursor: pointer;
 }
 
 #con{
-	margin-top: 100px;
-	font-size: 20px;
+  margin-top: 18vh;
+  font-size: 20px;
 }
 
-/*#circle{
-	position: absolute;
-    background: -webkit-linear-gradient(80deg, #70f7fe,  #fdefac, #bfb5dd, #bed5f5); 
-    border-radius: 0%;
-    width: 2000px;
-    height: 2000px;
-    z-index: -1;
-    opacity: 0.6;
-   box-shadow: 10px 10px 5px #888888;
-    animation:  docircle 30s  linear infinite;
-}
-@keyframes docircle{
-	0%{
-		top:0px;
-		right:0px;
-	}
-	20%{
-		top:0%;
-		right:0%;
-	}
-	50%{
-		top:0%;right:0%;
-	}
-	80%{
-		top:0%;right:0%;
-	}
-	100%{
-		top:0px;
-		right:0px;
-       
-	}		
-	
-}*/
 
 .menu{
 	width: 100px;
@@ -95,6 +61,7 @@
 	top:20px;
 	right: 20px;
 }
+
 .menu span{
 	display: block;
 	width: 5.5vw;
@@ -106,10 +73,11 @@
 	cursor: pointer;
 	transition: all .5s;
 }
-.menu span:nth-of-type(1){top: 20px; opacity: 1;}
-.menu span:nth-of-type(2){top: 50px;}
-.menu span:nth-of-type(3){top: 50px; opacity: 1;}
-.menu span:nth-of-type(4){top: 80px;}
+
+.menu span:nth-of-type(1){top: 30px; opacity: 1;}
+.menu span:nth-of-type(2){top: 60px;}
+.menu span:nth-of-type(3){top: 60px; opacity: 1;}
+.menu span:nth-of-type(4){top: 90px;}
 
 .button{
 	width: 100px;
@@ -132,3 +100,34 @@
   writing-mode: vertical-rl;
   left: 10vh;
   height: 100%;
+}
+
+@media screen and (max-width:768px){
+  #contact{
+    margin-bottom: 10vh;
+  }
+  .p{
+    height: 40px;
+    font-size: 20px;
+  }
+   #con{
+    margin-top: 8vh;
+    font-size: 16px;
+   }
+   #beside{
+   	visibility: hidden;
+   }
+   .h1{
+   	font-size: 10vw;
+   }
+   #page1{
+   	margin-left: 0;
+   	padding-left: 0;
+   }
+   #line11 #line22{
+   	font-size: 11px;
+   }
+   #line44{
+    font-size: 10px;
+   }
+}
