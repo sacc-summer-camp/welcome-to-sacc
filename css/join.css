@@ -1,0 +1,222 @@
+.main{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  margin: 0;
+}
+.a1{
+  height: 15vw;
+  width: 50%;
+}
+.a2{
+  width: 50%;
+}
+.a3{
+  height: 10vw;;
+  width: 100%;
+  font-size: 6.5vw;;
+  padding-left: 15vw;
+  font-weight: 500;
+}
+.a4{
+  height: 16vw;;
+  width: 100%;
+  font-size: 2.5vw;;
+  font-family: "仿宋";
+  padding-left: 18vw;
+  line-height: 10vw;;
+  color: #5a5a5a;
+}
+.a5{
+  height: 10vw;
+  width: 100%;
+  font-family: "楷体";
+  font-size: 1.5vw;
+  color: #636363;
+  padding-left: 16vw;
+}
+.b1{
+  height: 8vw;
+  width: 100%;
+  display: flex;
+  align-content: flex-start;
+  flex-direction: row;
+  padding-left: 20vw;
+}
+
+.b7{
+  height: 8vw;
+  width: 100%;
+  display: flex;
+  align-content: flex-start;
+  flex-direction: row;
+  outline: none;
+  border: none;
+  
+}
+.c1{
+  font-size: 2.7vw;
+  font-family: "宋体";
+  padding-top: 2.1vw;
+}
+.c2{
+  padding-left: 8vw;
+  padding-top: 0.8vw;
+}
+
+.c3{
+  padding-left: 35vw;
+  outline: none;  
+  border: none;
+}
+input{
+  height: 3vw;
+  width: 45vw;
+  font-size: 1.8vw;
+  font-family: "仿宋";
+}
+select{
+  height: 3.8vw;
+  width: 45vw;
+  font-size: 1.8vw;
+  font-family: "仿宋";
+  text-align: center;
+  text-align-last: center;
+}
+button{
+  height: 5vw;
+  width:30vw;
+  font-size: 2.5vw;
+  line-height: 2.5vw;
+  font-family: "楷体";
+  background: black;
+}
+
+.a-fadein{
+  -webkit-animation:fadein 1s forwards linear;
+  -moz-animation:fadein 1s forwards linear;
+  -ms-animation:fadein 1s forwards linear;
+  animation: fadein 1s forwards linear;
+}
+@-webkit-keyframes fadein{
+    0%{opacity:0;}
+    100%{opacity:1;}
+}
+@-moz-keyframes fadein{
+    0%{opacity:0;}
+    100%{opacity:1;}
+}
+@-ms-keyframes fadein{
+    0%{opacity:0;}
+    100%{opacity:1;}
+}
+@keyframes fadein{
+    0%{opacity:0;}
+    100%{opacity:1;}
+}
+
+
+.colorful {                                   /*颜色跑马灯*/
+  display: block;
+  width: 400px;
+  height: 10vw;
+  background-image: -webkit-linear-gradient(left, #3498db, #f47920 10%, #d71345 20%, #f7acbc 30%,
+  #ffd400 40%, #3498db 50%, #f47920 60%, #d71345 70%, #f7acbc 80%, #ffd400 90%, #3498db);
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-size: 200% 100%;
+  animation: colorful-animation 4s infinite linear;
+}
+@keyframes colorful-animation {
+  0% {
+      background-position: 0 0;
+  }
+  100% {
+      background-position: -100% 0;
+  }
+}
+
+.block{                 /*颜色覆盖渐变*/
+  color: #ffffff;
+  position: relative;
+  z-index: 1;
+  outline: none;
+  border: none;
+}
+.block::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #B0E0E6;
+  transform-origin: center right;
+  transform: scaleX(0);
+  transition: transform 0.2s linear;
+}
+.block:hover {
+  cursor: pointer;
+}
+.block:hover::before {
+  transform-origin: center left;
+  transform: scaleX(1);
+}
+
+
+.scribe{                           /*上下划线*/
+  color: #595959;
+  position: relative;
+  z-index: 1;
+}
+.scribe::before,
+.scribe::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 0.2vw;
+  background: #262626;
+  transform: scaleX(0);
+  transition: transform 0.2s ease-in-out;
+}
+.scribe::before {
+  top: 0;
+  transform-origin: center right;
+}
+.scribe::after {
+  bottom: 0;
+  transform-origin: center left;
+}
+.scribe:hover {
+  cursor: pointer;
+}
+.scribe:hover::before {
+  transform-origin: center left;
+  transform: scaleX(1);
+}
+.scribe:hover::after {
+  transform-origin: center right;
+  transform: scaleX(1);
+}
+
+
+#beside{
+  font-family: "Quicksand", sans-serif;
+  font-size: 60%;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  text-align: center;
+  writing-mode: vertical-rl;
+  left: 5vw;
+  height: 100%;
+}
+
+
