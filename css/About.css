@@ -1,345 +1,102 @@
-.roll span{
-    display: block;
-    width: 5.5vw;
-    height: .3vh;
-    background: #000000;
-    position: fixed;
-    cursor: pointer;
-    transition: all .5s;
-    right: 3vw;
-  }
-  
-  .roll span:nth-of-type(1){top: 6vh; opacity: 1;}
-  .roll span:nth-of-type(2){top: 9.5vh;}
-  .roll span:nth-of-type(3){top: 9.5vh; opacity: 1;}
-  .roll span:nth-of-type(4){top: 13vh;}
-  
-  button{
-    display: block;
-    width: 5.5vw;
-    height: 7.3vh;
-    background: #000000;
-    position: fixed;
-    cursor: pointer;
-    transition: all .5s;
-    right: 3vw;
-    background:none;
-      border:none;
-    outline:none;
-    top: 6vh;
-    z-index: 4;
-  }
-    
-#logo {
-    font-weight: 600;
-    font-family:"Montserrat";
-    font-size:30px;
-    color: #8c888b;
-    background: -webkit-linear-gradient(45deg, #70f7fe, #8A2BE2, #fdefac, #bfb5dd, #bed5f5);
-    -moz-linear-gradient(45deg, #70f7fe, #fbd7c6, #fdefac, #bfb5dd, #bed5f5);
-    -ms-linear-gradient(45deg, #70f7fe, #fbd7c6, #fdefac, #bfb5dd, #bed5f5);
-    color: transparent;
-    -webkit-background-clip: text;
-    animation: ran 10s linear infinite;   
+@media screen and (max-width: 768px) {
+    /* <= 1200px */
+    h1{
+        margin-left: 50px;
+        margin-top:200px;
+        font-size:80px;
+        font-family: "Montserrat";
+    }
+    .top-h1{
+        font-size:30px;
+        margin-left:250px;
+        margin-right:100px;
+        margin-bottom:50px;
+        margin-top:50px;
+    }
+    .bottom-h2{
+        padding-left:140px;
+        font-size:30px;
+        
+    }
+    .top-h2{
+        font-size:70px;
+        padding-left:40px;
+    }
+    h3{
+        font-size:40px;
+    }
+    p{
+        font-size:30px;
+        padding-right:100px;
+    }
 }
-h2{
-    font-size:40px;
+
+.main{
+    width:1100px;
+    margin:0 auto;
+    padding:0px;
+}
+h1{
+    margin-top:200px;
+    font-size:80px;
+    font-family: "Montserrat";
+}
+.top-h1{
+    font-size:30px;
+    margin-left:250px;
+    margin-bottom:50px;
+    margin-top:50px;
+}
+.bottom-h2{
+    padding-left:100px;
+    font-size:30px;
+}
+.top-h2{
+    font-size:50px;
 }
 h3{
+    font-size:40px;
+}
+p{
     font-size:30px;
 }
-dd{
-    font-size:30px;
-}
-@keyframes ran {
-    from {
-        backgroud-position: 0 0;
-    }
-    to {
-        background-position: 2000px 0;
-    }
-}
-
-#top_content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: calc(100% + 0px);
-    min-height: 400px;
-    -webkit-overflow-scrolling: touch;
-    overflow-scrolling: touch;
-}
-#top_content .inner {
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    min-height: 400px;
-}
-element.style {
-    top: 0px;
-}
-    @media screen and (max-height: 735px)
-#top_content .center_area {
-}
-     @media screen and (max-height: 730px)
-#top_content .center_area {
-}
-     @media screen and (max-height: 850px)
-#top_content .center_area {
-}
-#top_content .center_area {
-    position: absolute;
-    top: 50%;
-    left: 50%;
+html,*{
+    padding:0;
+    margin:0;
     box-sizing: border-box;
-    width: 100%;
-    max-width: 1300px;
-    height: auto;
-    padding-right: 100px;
-    padding-left: 100px;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    }  
-    #top_content h1 .main_logo.show {
-    opacity: 1;
+}
+.container{
+  display:flex;
+}
+.container .leftWrapper{
+  height:250px;
+  width:49%;
+}
+.container .rightWrapper{
+  height:250px;
+  flex:1;
+  display:flex;
+  flex-wrap: wrap;
+}
+.masked h3{
+    display: block;
+    width: 600px;
+    height: 90px;
+    /*渐变背景*/
+    background-image: -webkit-linear-gradient(left, #3498db, #f47920 10%, #d71345 20%, #f7acbc 30%,
+   #ffd400  30%, #3498db 50%, #f47920 60%, #d71345 70%, #f7acbc 80%, #ffd400 90%, #3498db);
+    color: transparent; /*文字填充色为透明*/
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;          /*背景剪裁为文字，只将文字显示为背景*/
+    background-size: 200% 100%;            /*背景图片向水平方向扩大一倍，这样background-position才有移动与变化的空间*/
+    /* 动画 */
+    animation: masked-animation 4s infinite linear;
+}
+@keyframes masked-animation {
+    0% {
+        background-position: 0 0;   /*background-position 属性设置背景图像的起始位置。*/
     }
-    #top_content h1 .main_logo {
-        display: block;
-        margin-top: -1em;
-        margin-bottom: 2.2em;
-        margin-bottom: .6em;
-        margin-left: -2px;
-        opacity: 0;
-        font-family: "Montserrat";
-        font-size: 80px;
-        font-weight: bold;
-        line-height: 1;
-        letter-spacing: .1em;
-        -webkit-transition: opacity .6s ease-in;
-        transition: opacity .6s ease-in;
+    100% {
+        background-position: -100% 0;
     }
-    #top_content .center_area.show .lead, #top_content .center_area.show .sub_logo {
-        opacity: 1 !important;
-    }
-    #top_content h1 .sub_logo {
-        display: block;
-        opacity: 0;
-        font-size: 24px;
-        letter-spacing: .1em;
-        -webkit-transition: opacity .5s ease-in;
-        transition: opacity .5s ease-in;
-    }
-    #top_content .copyright, #top_content h2 {
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        height: 95%;
-        font-size: 10px;
-        text-align: center;
-        letter-spacing: .05em;
-        -webkit-writing-mode: vertical-rl;
-        writing-mode: vertical-rl;
-    }
-    .montserrat {
-        font: Montserrat;
-        font-weight: 300;
-    }
-    .montserrat {
-        font-family: "Montserrat";
-        font-weight: 300;
-    }
-    #top_content .copyright .tate_inner, #top_content h2 .tate_inner {
-        display: inline-block;
-        position: relative;
-    }
-    #top_content .copyright span {
-        display: inline-block;
-        -webkit-transform: rotate(90deg);
-        transform: rotate(90deg);
-    }
-    #top_content h2 {
-        left: 50px;
-        min-height: 500px;
-    }
-    
-    h1, h2, h3, h4, h5 {
-        margin: 0;
-        padding: 0;
-        line-height: 1;
-    }
-    #main {
-        overflow: hidden;
-    }
-   
-    #main .block {
-        padding-bottom: 0;
-    }
-    #main .block {
-        position: relative;
-        box-sizing: border-box;
-        padding-bottom: 30px;
-    }
-    article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
-        display: block;
-    }
-    #main .block .content {
-        width: 100%;
-        max-width: 1300px;
-        margin-right: auto;
-        margin-left: auto;
-        padding-right: 100px;
-        padding-left: 100px;
-    }
-    #main .block * {
-        box-sizing: border-box;
-    }
-    @media screen and (min-width: 1055px)
-     #main .block .content>.left_block {
-        width: calc(100% - 689px);
-      }
-    #main .block .content>.left_block {
-    float: left;
-    width: 300px;
-    } 
-    @media screen and (min-width: 1055px)
-    #main .block .content>.right_block {
-      width: 689px;
-     }
-    #main .block .content>.right_block {
-      float: right;
-      width: calc(100% - 300px);
-     }
-    #main .block .right_block {
-      padding-bottom: 10px;
-    }
-    #main .block * {
-      box-sizing: border-box;
-     }
-     #main .block .content > .right_block .text_area {
-        position: relative;
-        z-index: 1;
-        margin-top: 0.3em;
-    }
-    #main .block .content > .right_block .text_area dt {
-        margin-bottom: 10px;
-        padding-bottom: 0;
-    }
-    #main .block .content>.right_block dt {
-        padding-bottom: 1.75em;
-        font-weight: bold;
-    }
-    #main .block .content>.right_block dt, #main .block .content>.right_block dd {
-        padding-bottom: .875em;
-    }
-    #main .block .animate_text {
-        position: relative;
-        left: 0;
-    }
-    #main .block .target_contents {
-        max-width: 1300px;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 50%;
-        -webkit-transform: translateX(-50%);
-        transform: translateX(-50%);
-    }
-    #main .block#block1.move .target_area {
-        animation: fuwafuwamove1 20s linear infinite;
-        -webkit-animation: fuwafuwamove1 20s linear infinite;
-    }
-    #main .block#block1 .target_area {
-        right: -27%;
-        bottom: 389px;
-    }
-    #main .block .target_area {
-        width: 600px;
-        height: 600px;
-        position: absolute;
-        float: right;
-        right: -40px;
-        bottom: 350px;
-    }
-    #main .block#block1.move .target_area .target_inner {
-        animation: fuwafuwainnermove1 10s ease-in-out infinite;
-        -webkit-animation: fuwafuwainnermove1 10s ease-in-out infinite;
-    }
-    #main .block .target_area .target_inner {
-        position: relative;
-        width: 100%;
-        height: 100%;
-    }
-    #main .block#block1 .clip_element {
-        background: url(../img/side_pic1.jpg) center no-repeat;
-    }
-    #main .block .clip_element {
-        width: 600px;
-        height: 600px;
-        background-size: 600px 600px;
-        clip-path: circle(50%);
-        -webkit-clip-path: circle(50%);
-        clip-path: circle(25%);
-        -webkit-clip-path: circle(25%);
-        transition: all 1s ease-out;
-        -webkit-transition: all 0.75s cubic-bezier(0.075, 0.82, 0.165, 1);
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        -webkit-transform: translate(-50%, -50%);
-        border-radius: 50%;
-    }
-    #main .block .content:after {
-        display: block;
-        visibility: hidden;
-        clear: both;
-        height: 0;
-        content: ".";
-    }
-    ul, ol, li, dl, dt, dd {
-        margin: 0;
-        padding: 0;
-        line-height: 1;
-        list-style: none;
-    }
-    p, div, span {
-       margin:0;
-        padding: 0;
-        line-height: 1.5;
-    }
-
-    .nav-mobile-button {
-        position: relative;
-        float: right;
-        padding: 9px 10px;
-        margin-top: 8px;
-        margin-right: 15px;
-        margin-bottom: 8px;
-        background-color: transparent;
-        background-image: none;
-        border: 1px solid transparent;
-        border-radius: 4px;
-        background: #eee; 
-    }
-    .nav-mobile-button .sr-only {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px;
-        overflow: hidden;
-        clip: rect(0, 0, 0, 0);
-        border: 0; 
-    }
-    .nav-mobile-button .icon-bar {
-        display: block;
-        margin-top: 4px;
-        width: 22px;
-        height: 2px;
-        background: #f65d3f;
-        border-radius: 1px; 
-    }
+}

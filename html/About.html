@@ -5,286 +5,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/About.css">
     <link rel="stylesheet" href="../css/iconfont1.css">
     <link rel="stylesheet" href="../css/iconfont.css">
-
-</head>style
+    <link rel="stylesheet" href="../css/About.css">
+</head>
 <body >
-       <script>
-       var isClick = false;
-        var rollDom = document.querySelectorAll(".line");
-        console.log(rollDom);
-       function menuIconRotate () {
-       isClick = !isClick;
-       var page2=document.getElementById("page2");				
-       var home=document.getElementById("home");
+  <div class="main">
+    <h1>ABOUT US</h1>
+    <div class="top-h1">计算机学院科协成立于1987年，是计算机学院分团委领导下以科学技术交流为目的的学生组织，其宗旨在于营造科技氛围，提高科技素质，造就科技人才。该协会以学院的特色专业为依托，结合学院专业学科及学生的实际情况，围绕当今科技领域的热点问题，积极组织在校学生参加科技活动，开展技术交流，培养学生的脑力思维，提高科技认知能力及动手能力。</div>
+    <div class="container">
+        <div class=" leftWrapper top-h2">办公室</div>
+        <div class="rightWrapper">
+            <div><div class="masked"><h3>OFFICE</h3></div>
+               <p>办公室是科协的重要组成部分！它负责科协的整个统筹规划，承担活动策划宣传，组织运行，等工作。其下设有内务部，策划部宣传部在办公室成员的合作下，科协才能顺利地 举办各种比赛。
+               </p> </div>
+        </div>
+     </div>
+     <div class="container">
+        <div class="leftWrapper top-h2 ">新媒体</div>
+        <div class="rightWrapper">
+            <div><div class="masked"><h3>NEW MEDIA</h3></div>
+             <p>作为科协的推广部门，新媒体的小伙伴们主要负责的是关于科协的信息的发布与分享，以及院科协的运营，同时还会教授剪辑学院视频的内容，一起见证科协的各项活动，为院科协的蓬勃发展添上有力的一笔。 
+             </p> </div>
+        </div>
+     </div>
+     <h2 class=top-h2>技术部:</h2>
+     <div class="container">
+        <div class="bottom-h2 leftWrapper"><span class="iconfont1">&#xe622;</span>安全组</div>
+        <div class="rightWrapper">
+            <div><div class="masked"><h3>SECYRITY GROUP</h3></div>
+             <p> 安全组是由一群对黑客技术感兴趣的年轻人组成的兴趣团体。  
+             </p> </div>
+        </div>
+     </div>
+     <div class="container">
+        <div class="bottom-h2 leftWrapper"><span class="iconfont1" style="font-weight: 1000">&#xe603;</span> 前端开发组</div>
+        <div class="rightWrapper">
+            <div><div class="masked"><h3>FROUT-END DEVELOPMENT GROUP</h3></div>
+             <p> 我们是网站的艺术总监，只写有情怀的代码。我们是科协的颜值担当，只做有情调的码农欢迎加入前端开发组~
+             </p> </div>
+        </div>
+     </div>
+     <div class="container">
+        <div class="bottom-h2 leftWrapper"><span class="iconfont1">&#xe687;</span> 后端开发组</div>
+        <div class="rightWrapper">
+            <div><div class="masked"><h3>BACKEND DEVELOPMENT GROUP</h3></div>
+             <p>后端组使用Java语言进行后端开发，处理前端发送的各种请求。
+             </p> </div>
+        </div>
+     </div>
+     <div class="container">
+        <div class="bottom-h2 leftWrapper"><span class="iconfont1">&#xe61d;</span> 嵌入式开发组</div>
+        <div class="rightWrapper">
+            <div><div class="masked"><h3>EMBEDDED KAI'FA</h3></div>
+             <p> 两个人，一个组。简单却暗藏玄机，广泛涉猎各种语言，加入我们、一起在编程的路上斩妖除bug！
+             </p> </div>
+        </div>
+     </div>
+     <div class="container">
+        <div class="bottom-h2 leftWrapper"><span class="iconfont1">&#xe66e;</span> 算法组</div>
+        <div class="rightWrapper">
+            <div><div class="masked"><h3 >ALGORITHMIC GROUP</h3></div>
+             <p>算法是一个计算的具体步骤，常用于计算、数据处理和自动推理。其在计算机这个行业中无处不在。
+             </p> </div>
+        </div>
+     </div>
+     <div class="container">
+        <div class="bottom-h2 leftWrapper"><span class="iconfont1">&#xe693;</span> Python组</div>
+        <div class="rightWrapper">
+            <div><div class="masked"><h3>ALGORITHMIC GROUP>PYTHON GROUP</h3></div>
+             <p>  Life is short，you need Python。python组旨在带领大家领略python的简洁优雅，
+                找到适合自己的方向
+             </p> </div>
+        </div>
+     </div>
   
-      if (isClick) {
-      rollDom[0]..opacity = 0;
-      rollDom[3].style.opacity = 0;
-      rollDom[1].style.transform = 'rotate(45deg)';
-      rollDom[2].style.transform = 'rotate(-45deg)';
-
-    
-      page2.className="menu-display"; 
-    
-     }	
-     else {
-      setTimeout(function () {
-      rollDom[0].style.opacity = 1;
-      rollDom[3].style.opacity = 1;
-      }, 200)
-      rollDom[1].style.transform = 'rotate(0deg)';
-        rollDom[2].style.transform = 'rotate(0deg)';
-      page2.className="menu-disappear";
-    }
-    }
-   </script>
-         <button class="roll" onclick="menuIconRotate()">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-              <tton>
-          
-        <div id="top_content">
-            <div class="inner">
-               <div class="logo" id="span_logo">
-                   <img src="../static/img/logo_副本_副本.png">
-                   <span style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size:20px">sacc</span>
-               </div>
-               <div class="center_area show">
-                   <h1>
-                       <div class="main_logo show" >ABOUT US</div>
-                       <div class="sub_logo" >计算机学院科协成立于1987年，是计算机学院分团委领导下以科学技术交流为目的的学生组织，其宗旨在于营造科技氛围，提高科技素质，造就科技人才。该协会以学院的特色专业为依托，结合学院专业学科及学生的实际情况，围绕当今科技领域的热点问题，积极组织在校学生参加科技活动，开展技术交流，培养学生的脑力思维，提高科技认知能力及动手能力。</div>
-                    </h1>
-                
-               <h2 class="montserrat">
-                   <div class="tate_inner" style="top:0px">
-                        <span>©</span>
-                        2019 Science Association of Computer College All Rights Reserved.
-                   </div>
-            </div>
-        </div> 
-        <div id="main">
-                <article class="block move" id="block2">
-                        <div class="content">
-                            <div class="left_block">
-                                  <h3>办公室</h3>
-                           </div>
-                            <div class="right_block">
-                              <dl class="text_area">
-                                 <dt id="animate_text2" class="animate_text pc_only">
-                                     <p class="navbar-brand" id="logo" href="#"
-                                     >OFFICE</p>
-                                 </dt>
-                                 <dd>
-                                        办公室是科协的重要组成部分！它负责科协的整个统筹规划，承担活动策划宣传，组织运行，等工作。其下设有内务部，策划部宣传部在办公室成员的合作下，科协才能顺利地 举办各种比赛。
-                                 </dd>
-                               </dl>
-                             </div>
-                          </div>
-                          <div class="target_contents">
-                           <div class="target_area">
-                                 <div class="target_inner">
-                                  <div class="clip_element"></div>
-                                               </div>
-                                          </div>
-                                      </div>
-          </article>
-       <article class="block move" id="block2">
-                            <div class="content">
-                                <div class="left_block">
-                                      <h3>新媒体</h3>
-                               </div>
-                                <div class="right_block">
-                                  <dl class="text_area">
-                                     <dt id="animate_text2" class="animate_text pc_only">
-                                         <p class="navbar-brand" id="logo" href="#"
-                                         >NEW MEDIA</p>
-                                     </dt>
-                                     <dd>
-                                            作为科协的推广部门，新媒体的小伙伴们主要负责的是关于科协的信息的发布与分享，以及院科协的运营，同时还会教授剪辑学院视频的内容，一起见证科协的各项活动，为院科协的蓬勃发展添上有力的一笔。 
-                                     </dd>
-                                   </dl>
-                                 </div>
-                              </div>
-                              <div class="target_contents">
-                               <div class="target_area">
-                                     <div class="target_inner">
-                                      <div class="clip_element"></div>
-                                                   </div>
-                                              </div>
-                                          </div>
-           </article>           
-        <h3 style="margin-left:100px; padding-bottom: 30px">技术部:</h3>
-        <article class="block move" id="block2">
-             <div class="content">
-                  <div class="left_block">
-                       <h3><span class="iconfont1" style="font-weight: 1000">&#xe622;</span> 安全组</h3>
                       
-                  </div>
-                  <div class="right_block">
-                     <dl class="text_area">
-                          <dt id="animate_text2" class="animate_text pc_only">
-                               <p class="navbar-brand" id="logo" href="#"
-                               >SECYRITY GROUP</p>
-                          </dt>
-                           <dd>
-                            安全组是由一群对黑客技术感兴趣的年轻人组成的兴趣团体。    
-                           </dd>
-                     </dl>
-                 </div>
-             </div>
-             <div class="target_contents">
-                   <div class="target_area">
-                       <div class="target_inner">
-                           <div class="clip_element"></div>
-                                    </div>
-                                </div>
-                            </div>
-             </article>
-             <article class="block move" id="block2">
-                  <div class="content">
-                      <div class="left_block">
-                            <h3><span class="iconfont1" style="font-weight: 1000">&#xe603;</span> 前端开发组</h3>
-                     </div>
-                      <div class="right_block">
-                        <dl class="text_area">
-                           <dt id="animate_text2" class="animate_text pc_only">
-                               <p class="navbar-brand" id="logo" href="#"
-                               >FROUT-END DEVELOPMENT GROUP</p>
-                           </dt>
-                           <dd>
-                            我们是网站的艺术总监，只写有情怀的代码。我们是科协的颜值担当，只做有情调的码农欢迎加入前端开发组~
-                           </dd>
-                         </dl>
-                       </div>
-                    </div>
-                    <div class="target_contents">
-                     <div class="target_area">
-                           <div class="target_inner">
-                            <div class="clip_element"></div>
-                                         </div>
-                                    </div>
-                                </div>
-                 </article>
-                 <article class="block move" id="block2">
-                   <div class="content">
-                          <div class="left_block">
-                            <h3><span class="iconfont1">&#xe687;</span> 后端开发组</h3>
-                         </div>
-                            <div class="right_block">
-                               <dl class="text_area">
-                                 <dt id="animate_text2" class="animate_text pc_only">
-                                  <p class="navbar-brand" id="logo" href="#"
-                                  >BACKEND DEVELOPMENT GROUP</p>
-                                  </dt>
-                                  <dd>
-                                     后端组使用Java语言进行后端开发，处理前端发送的各种请求。
-                                   </dd>
-                                </dl>
-                             </div>
-                        </div>
-                         <div class="target_contents">
-                            <div class="target_area">
-                                 <div class="target_inner">
-                                    <div class="clip_element"></div>
-                                         </div>
-                                 </div>
-                        </div>
-             </article>
-             <article class="block move" id="block2">
-                <div class="content">
-                  <div class="left_block">
-                     <h3><span class="iconfont1">&#xe61d;</span> 嵌入式开发组</h3>
-                </div>
-                 <div class="right_block">
-                       <dl class="text_area">
-                                <dt id="animate_text2" class="animate_text pc_only">
-                                  <p class="navbar-brand" id="logo" href="#"
-                                  >EMBEDDED KAI'FA</p>
-                                    </dt>
-                                  <dd>
-                                        两个人，一个组。简单却暗藏玄机，广泛涉猎各种语言，加入我们、一起在编程的路上斩妖除bug！
-                                  </dd>
-                               </dl>
-                     </div>
-                  </div>
-                   <div class="target_contents">
-                       <div class="target_area">
-                        <div class="target_inner">
-                        <div class="clip_element"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                  </article>
-                  <article class="block move" id="block2">
-                        <div class="content">
-                          <div class="left_block">
-                               <h3><span class="iconfont1">&#xe66e;</span> 算法组</h3>
-                          </div>
-                              <div class="right_block">
-                                   <dl class="text_area">
-                                        <dt id="animate_text2" class="animate_text pc_only">
-                                         <p class="navbar-brand" id="logo" href="#"
-                                         >ALGORITHMIC GROUP</p>
-                                         </dt>
-                                       <dd>
-                                            算法是一个计算的具体步骤，常用于计算、数据处理和自动推理。其在计算机这个行业中无处不在。
-                                       </dd>
-                                    </dl>
-                          </div>
-                       </div>
-                        <div class="target_contents">
-                            <div class="target_area">
-                             <div class="target_inner">
-                             <div class="clip_element"></div>
-                                                     </div>
-                                                 </div>
-                                             </div>
-                       </article>
-                       <article class="block move" id="block2">
-                            <div class="content">
-                              <div class="left_block">
-                                   <h3><span class="iconfont1">&#xe693;</span> Python组</h3>
-                              </div>
-                                  <div class="right_block">
-                                       <dl class="text_area">
-                                            <dt id="animate_text2" class="animate_text pc_only">
-                                             <p class="navbar-brand" id="logo" href="#"
-                                             >ALGORITHMIC GROUP>PYTHON GROUP</p>
-                                             </dt>
-                                           <dd>
-                                                Life is short，you need Python。python组旨在带领大家领略python的简洁优雅，
-                                                找到适合自己的方向
-                                           </dd>
-                                        </dl>
-                              </div>
-                           </div>
-                            <div class="target_contents">
-                                <div class="target_area">
-                                 <div class="target_inner">
-                                 <div class="clip_element"></div>
-                                                         </div>
-                                                     </div>
-                                                 </div>
-                           </article>
-                        </div>
-            <div class="iconfont" style="float:right">
-                <span class="iconfont">&#xe612;</span>
-                <span class="iconfont">&#xe7e5;</span>
-                <span class="iconfont">&#xf1b4;</span>
-                <span class="iconfont">&#xe667;</span>
-            </div>
-    </div>
+ </div>
     <script type="text/javascript" src="http://cdn.repository.webfont.com/wwwroot/js/wf/youziku.api.min.js"></script>
     <script type="text/javascript">
     $webfont.load("body", "39103f2e6e8548e6885108fe66b9d928", "HaTian-JingZhi");
     /*$webfont.load("#id1,.class1,h1", "39103f2e6e8548e6885108fe66b9d928", "HaTian-JingZhi");*/
     /*．．．*/
     $webfont.draw();
-    </script>
+    </script> -->
     </body>
 </html>
