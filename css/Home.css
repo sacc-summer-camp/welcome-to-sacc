@@ -18,10 +18,11 @@ body{
 	display: flex;
 	flex-direction: row;
   height: 100vh;
-  transform: translateY(-200%);
+  transform: translateY(-100%);
   background-color: white;
   position: absolute;
-  z-index: 9998;
+  top: 0;
+  z-index: 9999;
   width: 100%;
 }
 
@@ -32,10 +33,10 @@ body{
 
 @keyframes display{
 	0%{
-    transform: translateY(-200%);
+    transform: translateY(-100%);
 	}
 	100%{
-    transform: translateY(-100%);
+    transform: translateY(0);
 	}    
 }
 .menu-disappear{
@@ -45,10 +46,10 @@ body{
 
 @keyframes disappear{
 	0%{
-		transform: translateY(-100%);
+		transform: translateY(0);
 	}
 	100%{
-		transform: translateY(-200%);
+		transform: translateY(-100%);
 	}  
 }
 
@@ -82,7 +83,7 @@ button{
 	border:none;
   outline:none;
   top: 6vh;
-  z-index: 9999;
+  z-index: 10000;
 }
 
 .roll span{
@@ -118,9 +119,13 @@ button{
   font-size: .16rem; 
 }
 
+.sacc{
+  margin-top: -2vh;
+}
+
 #main_logo {
-  font-size: 1.4rem;
-  font-weight: 900;
+  font-size: 1.2rem;
+  font-weight: 100;
   position: absolute;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
@@ -128,18 +133,19 @@ button{
   z-index: 3;
   transition: background-color 3.0s, width 3.0s;
   width: 0;
-
+  font-family: 'Spectral SC', serif;
 }
 
 #under_main_logo {
-  font-size: 1.4rem;
-  font-weight: 900;
+  font-size: 1.2rem;
+  font-weight: 100;
   position: absolute;
   z-index: 2;
   -webkit-text-fill-color: #c7bbc5;
   -webkit-background-clip: text;
   background-clip: text;
   height: 140px;
+  font-family: 'Spectral SC', serif;
 }
 
 #quanchen {
@@ -187,6 +193,7 @@ a {
 .m1 {
   margin-left: 12vw;
   margin-top: 14vh;
+  font-family: 'Ma Shan Zheng', cursive;
   opacity: 0; 
    -webkit-animation-name: fadeIn;
   -webkit-animation-duration: 3s; 
@@ -196,7 +203,7 @@ a {
 }
 
 td {
-  font-size: .3rem;
+  font-size: .25rem;
 }
 
 #shouye{
@@ -224,7 +231,7 @@ td {
 }
 
 .iconfontBox {
-  position: absolute;
+  position: fixed;
   opacity: 0; 
   -webkit-animation-name: fadeIn;
   -webkit-animation-duration: 3s; 
@@ -288,10 +295,13 @@ footer {
     left: 8vh;
   }
   #quanchen{
-    margin-top: 21vh;
+    margin-top: 22vh;
   }
   .center_area {
     padding-top: 26vh;
+  }
+  .slash {
+    height: .23rem;
   }
 }
 @media screen and (min-width: 992px) and (max-width: 1300px) {
@@ -299,7 +309,7 @@ footer {
     font-size: 105px;
   }
   #quanchen{
-    margin-top: 22vh;
+    margin-top: 25vh;
   }
   .center_area {
     padding-top: 26vh;
@@ -308,16 +318,16 @@ footer {
     left: 8vh;
   }
   .sacc{
-    padding-top: 1vh;
+    margin-top: -3vh;
   }
   #main_logo {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
   #under_main_logo {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
   .m1 {
-    margin-top: 13vh;
+    margin-top: 12vh;
   }
 }
 @media screen and (min-width: 1300px) and (max-width: 1580px) {
@@ -325,7 +335,7 @@ footer {
     font-size: 105px;
   }
   #quanchen{
-    margin-top: 19vh;
+    margin-top: 21vh;
   }
   .center_area {
     padding-top: 28vh;
@@ -333,14 +343,11 @@ footer {
   #beside{
     left: 7vh;
   }
-  .sacc{
-    padding-top: 1vh;
-  }
   #main_logo {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   #under_main_logo {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   .m1 {
     margin-top: 13vh;
@@ -351,10 +358,13 @@ footer {
     font-size: 140px;
   }
   #quanchen{
-    margin-top: 19vh;
+    margin-top: 23vh;
   }
   #beside{
     left: 6vh;
+  }
+  .center_area {
+    padding-top: 26vh;
   }
   .iconfont {
     font-size: .18rem;
@@ -362,14 +372,11 @@ footer {
   #span_logo {
     font-size: 0.38rem;
   }
-  .sacc{
-    padding-top: 2vh;
-  }
   #main_logo {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   #under_main_logo {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 }
   
