@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Spectral SC', serif;
 }
 #canvas{
      position: fixed;
@@ -19,28 +20,34 @@ html{
 }
 h1{
     font-size:0.8rem;
-    font-family: "Montserrat";
+    font-family: 'Spectral SC', serif;
 }
 .top-h1{
-    font-size: 0.3rem;
+    font-size: 0.26rem;
     margin-left: 2.5rem;
     margin-bottom: .5rem;
     margin-top: .5rem;
+    font-family: '幼圆', cursive;
+    text-indent: 2em;   
 }
 .bottom-h2{
     font-size: .3rem;
-    text-indent: 2em;
+    /* text-indent: 2em; */
 }
 .top-h2{
     font-size: .5rem;
     margin-bottom: 24px;
     font-weight: 0.4rem;
+    font-family: '幼圆', cursive;
+    font-weight: 400;
 }
 h3{
     font-size: .4rem;
 }
 p{
-    font-size: .3rem;
+    font-size: .26rem;
+    font-family: '幼圆', cursive;
+    text-indent: 2em;
 }
 html,*{
     padding:0;
@@ -49,13 +56,12 @@ html,*{
 }
 .container{
   display:flex;
+  margin-bottom: 24px;
 }
 .container .leftWrapper{
-  height: 3rem;
   width: 49%;
 }
 .container .rightWrapper{
-  height: 3rem;
   flex:1;
   display:flex;
   flex-wrap: wrap;
@@ -100,18 +106,19 @@ html,*{
         box-sizing: border-box;
     }
     h1{
-
         padding-top: 60px;
         text-align: center;
-        font-size:40px;
-        font-family: "Montserrat";
+        font-size:43px;
+        font-family: 'Spectral SC', serif;
         margin: 0;
     }
     .top-h1{
-        font-size:24px;
-        margin: 0;
-        padding-top: 60px;
-        text-indent: 2em;
+      font-size: 22px;
+      margin: 0;
+      padding-top: 50px;
+      text-indent: 2em;
+      font-family: '幼圆', cursive;
+      line-height: .8rem;  
     }
     .container{
         display: block;
@@ -121,21 +128,48 @@ html,*{
     }
     .bottom-h2{
         font-size:30px;
+        text-align: center;
+        padding: .5rem;
     }
     .top-h2{
-        font-size:70px;
-        padding-left:40px;
-        font-weight: 10px;
+        font-size:60px;
+        text-align: center;
+        font-family: '幼圆', cursive;
+        padding-top: 60px;
     }
     h3{
         font-size:40px;
     }
     p{
-        font-size:30px;
+        font-size:26px;
     }
     .container .leftWrapper{
         width: auto;
         line-height: 2.5rem;
+    }
+    .container .rightWrapper p{
+      font-family: '幼圆', cursive;
+      line-height: .8rem;
+      font-size: 24px;
+      text-indent: 2em;
+    }
+    .game{
+      padding-top: 1rem;
+      line-height: .8rem;
+      height: auto;
+      display: block;
+    }
+    .game p{
+      font-size: 24px;
+    }
+    .container_item:nth-of-type(4) .container .leftWrapper{
+      line-height: 1;
+    }
+    .container_item:nth-of-type(4) .game{
+      padding: 0;
+    }
+    .container_item:nth-of-type(4) .top-h2{
+      padding-top: 110px;
     }
 }
 /*

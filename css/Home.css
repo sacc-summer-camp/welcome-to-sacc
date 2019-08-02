@@ -286,9 +286,8 @@ footer {
     height: auto;
     top: auto;
   }
-
-  body{
-    /* text-align: center; */
+  td {
+    font-size: .28rem;
   }
   .iconfontBox{
     left: 50%;
@@ -310,7 +309,9 @@ footer {
     width: .8rem;
     height: .03rem;
   }
-  
+  .center_area {
+    padding-top: 30vh;
+  }
   .roll span:nth-of-type(1){top: 6vh; opacity: 1;}
   .roll span:nth-of-type(2){top: 8.5vh;}
   .roll span:nth-of-type(3){top: 8.5vh; opacity: 1;}
@@ -323,16 +324,21 @@ footer {
     display: inline-block;
     width: 48px;
   }
-  #span_logo span{
-
+  .slash {
+    height: .23rem;
+  }
+  #beside {
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 @media screen and (min-width: 768px) and (max-width: 992px) {
   html{
     font-size: 78px;
   }  
-   #beside{
-    left: 8vh;
+  #beside {
+    left: 50%;
+    transform: translateX(-50%);
   }
   .center_area {
     padding-top: 26vh;
