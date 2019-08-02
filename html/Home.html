@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Home</title>
   <link rel="stylesheet" href="../css/iconfont.css">
@@ -17,18 +17,20 @@
 </head>
 
 <body>
-  <button class="roll" onclick="menuIconRotate()">
-    <span class="line"></span>
-    <span class="line"></span>
-    <span class="line"></span>
-    <span class="line"></span>
-  </button>
+  <header class="header_container">
+    <button class="roll" onclick="menuIconRotate()">
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+    </button>
+    <div class="logo" id="span_logo">
+      <img src="../static/img/logo_副本_副本.png">
+      <span>sacc</span>
+    </div>
+  </header>
   <div id="beside">
     ©2019 Science Association of Computer College All Rights Reserved.
-  </div>
-  <div class="logo" id="span_logo">
-  <img src="../static/img/logo_副本_副本.png">
-  <span>sacc</span>
   </div>
   <div id="home">
     <div class="content">
@@ -41,9 +43,9 @@
             <p id="main_logo">SACC</p>
             <h1 id="under_main_logo">SACC </h1>
           </div>
-          <div id="quanchen">
+            <div id="quanchen">
             Science Association of Computer College
-          </div>
+            </div>
         </div>
         <div>
           <table class="m1">

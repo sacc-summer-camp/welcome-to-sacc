@@ -13,7 +13,6 @@ body{
   background: linear-gradient(rgb(250, 237, 248), rgb(251, 235, 254));
   height: 100vh;
 }
-
 #page2{
 	display: flex;
 	flex-direction: row;
@@ -58,15 +57,12 @@ body{
 }
 
 .logo {
-  height: 23vh;
   font-weight: 600;
   position: absolute;
   z-index: 9999;
 }
 
 .logo img {
-  margin-top: 2vh;
-  margin-left: 1vw;
   z-index: 9999;
 }
 
@@ -121,6 +117,7 @@ button{
 
 .sacc{
   margin-top: -2vh;
+  height: 1.5rem;
 }
 
 #main_logo {
@@ -150,7 +147,6 @@ button{
 
 #quanchen {
   font-size: .22rem;
-  margin-top: 24vh;
   opacity: 0;
   animation-name: fadeIn; 
   animation-duration: 3s; 
@@ -225,7 +221,7 @@ td {
 #span_logo {
   display: inline-block;
   margin: 0;
-  padding: 0;
+  padding: 24px 0 0 24px;
   font-family: "Quicksand", sans-serif;
   font-size: .43rem;
 }
@@ -247,7 +243,6 @@ td {
   font-size: .21rem;
   cursor: pointer;
   transition: color .5s;
-
 }
 .iconfont:hover{
   color: #c7bbc5;
@@ -283,9 +278,54 @@ footer {
 }
 @media screen and (max-width: 768px){
   html{
-    font-size: 73px;
+    font-size: 66px;
+  }
+  #beside{
+    writing-mode: horizontal-tb;
+    bottom: 1vh;
+    height: auto;
+    top: auto;
   }
 
+  body{
+    /* text-align: center; */
+  }
+  .iconfontBox{
+    left: 50%;
+    right: auto;
+    display: flex;
+    bottom: 6vh;
+    transform: translateX(-50%);
+  }
+  .iconfontBox .iconfont {
+    margin: 0 18px;
+    font-size: .3rem;
+  }
+  button{
+    width: .8rem;
+    height: .6rem;
+  }
+  
+  .roll span{
+    width: .8rem;
+    height: .03rem;
+  }
+  
+  .roll span:nth-of-type(1){top: 6vh; opacity: 1;}
+  .roll span:nth-of-type(2){top: 8.5vh;}
+  .roll span:nth-of-type(3){top: 8.5vh; opacity: 1;}
+  .roll span:nth-of-type(4){top: 11vh;}
+  #span_logo{
+    display: flex;
+    align-items: center;
+  }
+  #span_logo img {
+    display: inline-block;
+    width: 48px;
+  }
+  #span_logo span{
+
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 992px) {
   html{
@@ -293,9 +333,6 @@ footer {
   }  
    #beside{
     left: 8vh;
-  }
-  #quanchen{
-    margin-top: 22vh;
   }
   .center_area {
     padding-top: 26vh;
@@ -307,9 +344,6 @@ footer {
 @media screen and (min-width: 992px) and (max-width: 1300px) {
   html{
     font-size: 105px;
-  }
-  #quanchen{
-    margin-top: 25vh;
   }
   .center_area {
     padding-top: 26vh;
@@ -334,9 +368,6 @@ footer {
   html{
     font-size: 105px;
   }
-  #quanchen{
-    margin-top: 21vh;
-  }
   .center_area {
     padding-top: 28vh;
   }
@@ -356,9 +387,6 @@ footer {
 @media screen and (min-width: 1581px){
   html{
     font-size: 140px;
-  }
-  #quanchen{
-    margin-top: 23vh;
   }
   #beside{
     left: 6vh;
