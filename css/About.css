@@ -1,0 +1,180 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Spectral SC', serif;
+}
+#canvas{
+     position: fixed;
+     background:#FFF0F5;
+     overflow: auto;
+     z-index: -1;
+}
+html{
+    font-size: 100px;
+}
+
+.main{
+    width:1100px;
+    margin:0 auto;
+    padding:0px;
+}
+h1{
+    font-size:0.8rem;
+    font-family: 'Spectral SC', serif;
+}
+.top-h1{
+    font-size: 0.26rem;
+    margin-left: 2.5rem;
+    margin-bottom: .5rem;
+    margin-top: .5rem;
+    font-family: '幼圆', cursive;
+    text-indent: 2em;   
+}
+.bottom-h2{
+    font-size: .3rem;
+    /* text-indent: 2em; */
+}
+.top-h2{
+    font-size: .5rem;
+    margin-bottom: 24px;
+    font-weight: 0.4rem;
+    font-family: '幼圆', cursive;
+    font-weight: 400;
+}
+h3{
+    font-size: .4rem;
+}
+p{
+    font-size: .26rem;
+    font-family: '幼圆', cursive;
+    text-indent: 2em;
+}
+html,*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+.container{
+  display:flex;
+  margin-bottom: 24px;
+}
+.container .leftWrapper{
+  width: 49%;
+}
+.container .rightWrapper{
+  flex:1;
+  display:flex;
+  flex-wrap: wrap;
+}
+.masked h3{
+    margin-bottom: .4rem;
+    /*渐变背景*/
+    background-image: -webkit-linear-gradient(left, #3498db, #f47920 10%, #d71345 20%, #f7acbc 30%,
+   #ffd400  30%, #3498db 50%, #f47920 60%, #d71345 70%, #f7acbc 80%, #ffd400 90%, #3498db);
+    color: transparent; /*文字填充色为透明*/
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;          /*背景剪裁为文字，只将文字显示为背景*/
+    background-size: 200% 100%;            /*背景图片向水平方向扩大一倍，这样background-position才有移动与变化的空间*/
+    /* 动画 */
+    animation: masked-animation 4s infinite linear;
+}
+@keyframes masked-animation {
+    0% {
+        background-position: 0 0;   /*background-position 属性设置背景图像的起始位置。*/
+    }
+    100% {
+        background-position: -100% 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    html{
+        font-size: 50px;
+    }
+    .main_container{
+        height: 100vh;
+        overflow: hidden;
+    }
+    .main{
+        width: auto;
+        transition: transform .5s cubic-bezier(.63,.01,.19,1.01);
+    }
+    /* <= 1200px */
+    .container_item{
+        padding: 20px 36px;
+        height: 100vh;
+        box-sizing: border-box;
+    }
+    h1{
+        padding-top: 60px;
+        text-align: center;
+        font-size:43px;
+        font-family: 'Spectral SC', serif;
+        margin: 0;
+    }
+    .top-h1{
+      font-size: 17px;
+      margin: 0;
+      padding-top: 50px;
+      text-indent: 2em;
+      font-family: '幼圆', cursive;
+      line-height: .8rem;  
+    }
+    .container{
+        display: block;
+    }
+    .masked{
+        text-align: center;
+    }
+    .bottom-h2{
+        font-size:30px;
+        text-align: center;
+        padding: .5rem;
+    }
+    .top-h2{
+        font-size:60px;
+        text-align: center;
+        font-family: '幼圆', cursive;
+        padding-top: 60px;
+    }
+    h3{
+        font-size:32px;
+    }
+    p{
+        font-size:26px;
+    }
+    .container .leftWrapper{
+        width: auto;
+        line-height: 2.5rem;
+    }
+    .container .rightWrapper p{
+      font-family: '幼圆', cursive;
+      line-height: .8rem;
+      font-size: 18px;
+      text-indent: 2em;
+    }
+    .game{
+      padding-top: 1rem;
+      line-height: .8rem;
+      height: auto;
+      display: block;
+    }
+    .game p{
+      font-size: 24px;
+    }
+    .container_item:nth-of-type(4) .container .leftWrapper{
+      line-height: 1;
+    }
+    .container_item:nth-of-type(4) .game{
+      padding: 0;
+    }
+    .container_item:nth-of-type(4) .top-h2{
+      padding-top: 110px;
+    }
+}
+/*
+    移动端手指事件 touch
+        touchstart => 手指接触屏幕时候触发
+        touchmove => 手指在屏幕上移动的时候触发
+        touchend => 手指离开屏幕的时候触发
+*/

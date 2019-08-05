@@ -13,15 +13,15 @@ body{
   background: linear-gradient(rgb(250, 237, 248), rgb(251, 235, 254));
   height: 100vh;
 }
-
 #page2{
 	display: flex;
 	flex-direction: row;
   height: 100vh;
-  transform: translateY(-200%);
+  transform: translateY(-100%);
   background-color: white;
   position: absolute;
-  z-index: 9998;
+  top: 0;
+  z-index: 9999;
   width: 100%;
 }
 
@@ -32,10 +32,10 @@ body{
 
 @keyframes display{
 	0%{
-    transform: translateY(-200%);
+    transform: translateY(-100%);
 	}
 	100%{
-    transform: translateY(-100%);
+    transform: translateY(0);
 	}    
 }
 .menu-disappear{
@@ -45,10 +45,10 @@ body{
 
 @keyframes disappear{
 	0%{
-		transform: translateY(-100%);
+		transform: translateY(0);
 	}
 	100%{
-		transform: translateY(-200%);
+		transform: translateY(-100%);
 	}  
 }
 
@@ -57,15 +57,12 @@ body{
 }
 
 .logo {
-  height: 23vh;
   font-weight: 600;
   position: absolute;
   z-index: 9999;
 }
 
 .logo img {
-  margin-top: 2vh;
-  margin-left: 1vw;
   z-index: 9999;
 }
 
@@ -82,7 +79,7 @@ button{
 	border:none;
   outline:none;
   top: 6vh;
-  z-index: 9999;
+  z-index: 10000;
 }
 
 .roll span{
@@ -118,9 +115,14 @@ button{
   font-size: .16rem; 
 }
 
+.sacc{
+  margin-top: -2vh;
+  height: 1.5rem;
+}
+
 #main_logo {
-  font-size: 1.4rem;
-  font-weight: 900;
+  font-size: 1.2rem;
+  font-weight: 100;
   position: absolute;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
@@ -128,23 +130,23 @@ button{
   z-index: 3;
   transition: background-color 3.0s, width 3.0s;
   width: 0;
-
+  font-family: 'Spectral SC', serif;
 }
 
 #under_main_logo {
-  font-size: 1.4rem;
-  font-weight: 900;
+  font-size: 1.2rem;
+  font-weight: 100;
   position: absolute;
   z-index: 2;
   -webkit-text-fill-color: #c7bbc5;
   -webkit-background-clip: text;
   background-clip: text;
   height: 140px;
+  font-family: 'Spectral SC', serif;
 }
 
 #quanchen {
   font-size: .22rem;
-  margin-top: 24vh;
   opacity: 0;
   animation-name: fadeIn; 
   animation-duration: 3s; 
@@ -187,6 +189,7 @@ a {
 .m1 {
   margin-left: 12vw;
   margin-top: 14vh;
+  font-family: 'Ma Shan Zheng', cursive;
   opacity: 0; 
    -webkit-animation-name: fadeIn;
   -webkit-animation-duration: 3s; 
@@ -196,7 +199,7 @@ a {
 }
 
 td {
-  font-size: .3rem;
+  font-size: .25rem;
 }
 
 #shouye{
@@ -218,13 +221,13 @@ td {
 #span_logo {
   display: inline-block;
   margin: 0;
-  padding: 0;
+  padding: 24px 0 0 24px;
   font-family: "Quicksand", sans-serif;
   font-size: .43rem;
 }
 
 .iconfontBox {
-  position: absolute;
+  position: fixed;
   opacity: 0; 
   -webkit-animation-name: fadeIn;
   -webkit-animation-duration: 3s; 
@@ -240,7 +243,6 @@ td {
   font-size: .21rem;
   cursor: pointer;
   transition: color .5s;
-
 }
 .iconfont:hover{
   color: #c7bbc5;
@@ -276,30 +278,78 @@ footer {
 }
 @media screen and (max-width: 768px){
   html{
-    font-size: 73px;
+    font-size: 66px;
   }
-
+  #beside{
+    writing-mode: horizontal-tb;
+    bottom: 1vh;
+    height: auto;
+    top: auto;
+  }
+  td {
+    font-size: .28rem;
+  }
+  .iconfontBox{
+    left: 50%;
+    right: auto;
+    display: flex;
+    bottom: 6vh;
+    transform: translateX(-50%);
+  }
+  .iconfontBox .iconfont {
+    margin: 0 18px;
+    font-size: .3rem;
+  }
+  button{
+    width: .8rem;
+    height: .6rem;
+  }
+  
+  .roll span{
+    width: .8rem;
+    height: .03rem;
+  }
+  .center_area {
+    padding-top: 30vh;
+  }
+  .roll span:nth-of-type(1){top: 6vh; opacity: 1;}
+  .roll span:nth-of-type(2){top: 8.5vh;}
+  .roll span:nth-of-type(3){top: 8.5vh; opacity: 1;}
+  .roll span:nth-of-type(4){top: 11vh;}
+  #span_logo{
+    display: flex;
+    align-items: center;
+  }
+  #span_logo img {
+    display: inline-block;
+    width: 48px;
+  }
+  .slash {
+    height: .23rem;
+  }
+  #beside {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 992px) {
   html{
     font-size: 78px;
   }  
-   #beside{
-    left: 8vh;
-  }
-  #quanchen{
-    margin-top: 21vh;
+  #beside {
+    left: 50%;
+    transform: translateX(-50%);
   }
   .center_area {
     padding-top: 26vh;
+  }
+  .slash {
+    height: .23rem;
   }
 }
 @media screen and (min-width: 992px) and (max-width: 1300px) {
   html{
     font-size: 105px;
-  }
-  #quanchen{
-    margin-top: 22vh;
   }
   .center_area {
     padding-top: 26vh;
@@ -308,24 +358,21 @@ footer {
     left: 8vh;
   }
   .sacc{
-    padding-top: 1vh;
+    margin-top: -3vh;
   }
   #main_logo {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
   #under_main_logo {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
   .m1 {
-    margin-top: 13vh;
+    margin-top: 12vh;
   }
 }
 @media screen and (min-width: 1300px) and (max-width: 1580px) {
   html{
     font-size: 105px;
-  }
-  #quanchen{
-    margin-top: 19vh;
   }
   .center_area {
     padding-top: 28vh;
@@ -333,14 +380,11 @@ footer {
   #beside{
     left: 7vh;
   }
-  .sacc{
-    padding-top: 1vh;
-  }
   #main_logo {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   #under_main_logo {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   .m1 {
     margin-top: 13vh;
@@ -350,11 +394,11 @@ footer {
   html{
     font-size: 140px;
   }
-  #quanchen{
-    margin-top: 19vh;
-  }
   #beside{
     left: 6vh;
+  }
+  .center_area {
+    padding-top: 26vh;
   }
   .iconfont {
     font-size: .18rem;
@@ -362,14 +406,11 @@ footer {
   #span_logo {
     font-size: 0.38rem;
   }
-  .sacc{
-    padding-top: 2vh;
-  }
   #main_logo {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   #under_main_logo {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 }
   
