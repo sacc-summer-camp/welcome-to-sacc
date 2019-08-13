@@ -16,214 +16,201 @@
 </head>
 
 <body>
-  <canvas id="canvas" style="position: absolute; z-index: -1;"></canvas>
+<canvas id="canvas" style="position: absolute; z-index: -1;"></canvas>
+<!--首页-->
+<div class="home_container">
   <header class="header_container">
-    <button class="roll" onclick="menuIconRotate()">
-      <span class="line"></span>
-      <span class="line"></span>
-      <span class="line"></span>
-      <span class="line"></span>
-    </button>
-    <div class="logo" id="span_logo">
-      <img src="../static/img/logo_副本_副本.png">
-      <span>sacc</span>
-    </div>
+      <button class="roll" onclick="menuIconRotate()">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+      </button>
+      <div class="logo" id="span_logo">
+          <img src="../static/img/logo_副本_副本.png">
+          <span>sacc</span>
+      </div>
   </header>
   <div id="beside">
-    ©2019 Science Association of Computer College All Rights Reserved.
+      ©2019 Science Association of Computer College All Rights Reserved.
   </div>
   <div id="home">
-    <div class="content">
-      <div class="center_area">
-        <div class="title">
-          <div id="logoup">
-            Program with <b>handsome</b> or <b>beautiful</b> senior ? Come and join us !
+      <div class="content">
+          <div class="center_area">
+              <div class="title">
+                  <div id="logoup">
+                      Program with <b>handsome</b> or <b>beautiful</b> senior ? Come and join us !
+                  </div>
+                  <div class="sacc">
+                      <p id="main_logo">SACC</p>
+                      <h1 id="under_main_logo">SACC </h1>
+                  </div>
+                  <div id="quanchen">
+                      Science Association of Computer College
+                  </div>
+              </div>
+              <div>
+                  <table class="m1">
+                      <tr>
+                          <td id="shouye"><a href="Home.html" rel="_blank">首页</a>
+                              <img class="slash"
+                                   src="https://fairway-corp.co.jp/wp-content/themes/fairway-news/common/img/menu_slash.svg" alt="">
+                          </td>
+                          <td id="guanyu"><a href="About.html" rel="_blank">关于</a>
+                              <img class="slash"
+                                   src="https://fairway-corp.co.jp/wp-content/themes/fairway-news/common/img/menu_slash.svg" alt="">
+                          </td>
+                          <td id="shenqing"><a href="join.html" rel="_blank">申请</a>
+                              <img class="slash"
+                                   src="https://fairway-corp.co.jp/wp-content/themes/fairway-news/common/img/menu_slash.svg" alt="">
+                          </td>
+                          <td id="lianxi"><a href="Contact.html">联系我们</a></td>
+                      </tr>
+                  </table>
+              </div>
           </div>
-          <div class="sacc">
-            <p id="main_logo">SACC</p>
-            <h1 id="under_main_logo">SACC </h1>
-          </div>
-            <div id="quanchen">
-            Science Association of Computer College
-            </div>
-        </div>
-        <div>
-          <table class="m1">
-            <tr>
-              <td id="shouye"><a href="Home.html" rel="_blank">首页</a>
-                <img class="slash"
-                  src="https://fairway-corp.co.jp/wp-content/themes/fairway-news/common/img/menu_slash.svg" alt="">
-              </td>
-              <td id="guanyu"><a href="About.html" rel="_blank">关于</a>
-                <img class="slash"
-                  src="https://fairway-corp.co.jp/wp-content/themes/fairway-news/common/img/menu_slash.svg" alt="">
-              </td>
-              <td id="shenqing"><a href="Applyfor.html" rel="_blank">申请</a>
-                <img class="slash"
-                  src="https://fairway-corp.co.jp/wp-content/themes/fairway-news/common/img/menu_slash.svg" alt="">
-              </td>
-              <td id="lianxi" onclick="contactShow()">联系我们</td>
-            </tr>
-          </table>
-        </div>
-      </div>      
-    </div>
+      </div>
   </div>
   <div class="iconfontBox">
-    <span class="iconfont">&#xebb4;</span>
-    <span class="iconfont">&#xe609;</span>
-    <span class="iconfont">&#xf1b4;</span>
-    <span class="iconfont">&#xe667;</span>
+      <span class="iconfont">&#xebb4;</span>
+      <span class="iconfont">&#xe609;</span>
+      <span class="iconfont">&#xf1b4;</span>
+      <span class="iconfont">&#xe667;</span>
   </div>
+</div>
 
+<!--关于-->
+<div class="about_container">
   <div id="page2">
-    <div id="line11">
-      <h2 class="me-h2"><a href="">主页</a></h2><label class="me-label">Home</label>
-      <h2 class="me-h2"><a href="">申请</a></h2><label class="me-label">Application</label>
-      <h2 class="me-h2"><a href="">联系我们</a></h2><label class="me-label">Contact Us</label>
-    </div>
-    <div id="line22">
-      <h2 class="me-h2"><a href="">办公室</a></h2><label class="me-label">Office</label>
-      <h2 class="me-h2"><a href="">技术部 -></a></h2><label class="me-label">Technical Section</label>
-      <h2 class="me-h2"><a href="">新媒体</a></h2><label class="me-label">New Media</label>
-    </div>
-    <div id="line44" class="me-h2">
-      <h2><a href="">安全组</a></h2>
-      <h2><a href="">游戏组</a></h2>
-      <h2><a href="">前端开发组</a></h2>
-      <h2><a href="">后端开发组</a></h2>
-      <h2><a href="">算法组</a></h2>
-      <h2><a href="">python组</a></h2>
-    </div>  
-  </div>
-  <div id="page1">
-    <div >
-      <h1 class="h1">CANTACT US</h1>
-      <h2 id="contact">联系我们</h2>
-      <div id="con">
-        <p><strong>QQ: </strong>3159742702</p>
-        <p><strong>WeChat: </strong>南邮计软网安院科协</p>
-        <p><strong>E-mail: </strong>njupt.sacc@outlook.com</p>
-        <p><strong>Github: </strong>南京邮电大学计算机软件学院网络空间安全学院科学与技术协会</p>
+      <div class="line_container">
+          <div id="line11">
+              <h2 class="me-h2"><a href="">主页</a></h2><label class="me-label">Home</label>
+              <h2 class="me-h2"><a href="join.html">申请</a></h2><label class="me-label">Application</label>
+              <h2 class="me-h2"><a href="">联系我们</a></h2><label class="me-label">Contact Us</label>
+          </div>
+          <div id="line22">
+              <h2 class="me-h2"><a href="">办公室</a></h2><label class="me-label">Office</label>
+              <h2 class="me-h2"><a href="">技术部</a></h2><label class="me-label">Technical Section</label>
+              <h2 class="me-h2"><a href="">新媒体</a></h2><label class="me-label">New Media</label>
+          </div>
       </div>
-    </div>
-    <div id="circle"></div>	
   </div>
-  <script type="text/javascript" src="../js/main.js"></script>
-  <script>
-      window.requestAnimationFrame = (function(){
-          return window.requestAnimationFrame ||
-                 window.webkitRequestAnimationFrame ||
-                 window.mozRequestAnimationFrame ||
-                 function( callback ){
-                      window.setTimeout( callback, 1000/2 );
-                 };
-      })();
-      var myCanvas = document.getElementById("canvas");
-      var ctx = myCanvas.getContext("2d");//getContext 设置画笔
-      var num;
-      var w,h;
-      var duixiang = [];
-      var move = {};
-      function widthheight(){
-          w = myCanvas.width = window.innerWidth;
-          h = myCanvas.height = window.innerHeight;
-        num= Math.floor(w*h*0.00008);//点的数量。根据屏幕大小确定
-          for(var i = 0;i < num;i++){
-              duixiang[i] = {
-                  x:Math.random()*w,
-                  y:Math.random()*h,
-                  cX:Math.random()*0.6-0.3,
-                  cY:Math.random()*0.6-0.3,
-              R:Math.floor(Math.random()*5)+2,
-              //CC:Math.floor(Math.random()*3)+2,
-               r: Math.floor(Math.random() * 300),   
-                  g: Math.floor(Math.random() * 300),  
-                  b:Math.floor(Math.random() * 300)   
-              } 
-             // console.log(duixiang[i])
-              Cricle(duixiang[i].x,duixiang[i].y,duixiang[i].R,duixiang[i].r,duixiang[i].g,duixiang[i].b);
-            //Cricle(duixiang[i].x,duixiang[i].y,duixiang[i].R,duixiang[i].CC);
+</div>
+<script type="text/javascript" src="../js/main.js"></script>
+<script>
+  window.requestAnimationFrame = (function(){
+      return window.requestAnimationFrame ||
+             window.webkitRequestAnimationFrame ||
+             window.mozRequestAnimationFrame ||
+             function( callback ){
+                  window.setTimeout( callback, 1000/2 );
+             };
+  })();
+  var myCanvas = document.getElementById("canvas");
+  var ctx = myCanvas.getContext("2d");//getContext 设置画笔
+  var num;
+  var w,h;
+  var duixiang = [];
+  var move = {};
+  function widthheight(){
+      w = myCanvas.width = window.innerWidth;
+      h = myCanvas.height = window.innerHeight;
+      num= Math.floor(w*h*0.00004);//点的数量。根据屏幕大小确定
+      for(var i = 0;i < num;i++){
+          duixiang[i] = {
+              x:Math.random()*w,
+              y:Math.random()*h,
+              cX:Math.random()*0.6-0.3,
+              cY:Math.random()*0.6-0.3,
+          R:Math.floor(Math.random()*5)+2,
+          //CC:Math.floor(Math.random()*3)+2,
+           r: Math.floor(Math.random() * 300),
+              g: Math.floor(Math.random() * 300),
+              b:Math.floor(Math.random() * 300)
           }
-      };widthheight();//获取浏览器的等宽度等高
-   
-      function Cricle(x,y,R,r,g,b){
-          ctx.save();//保存路径
-         if(Math.random()>0.991) {ctx.globalAlpha= 0.9;}//ctx.fillStyle = "#CCC";}//填充的背景颜色
-         else { ctx.globalAlpha=0.47;}
-         
-        ctx.fillStyle = "rgb("+ r +","+ g +","+ b +")";
-          ctx.beginPath();//开始绘画
-        ctx.arc(x,y,R,Math.PI*2,0);//绘画圆 x y 半径（大小） 角度  一个PI 是180 * 2 = 360    真假 0/1 true/false
-          ctx.closePath();//结束绘画
-          ctx.fill();//填充背景颜色
-          ctx.restore();//回复路径
-      };Cricle();
-   
-   
-      !function draw(){
-          ctx.clearRect(0,0,w,h)//先清除画布上的点
-          for(var i = 0;i < num;i++){
-              duixiang[i].x += duixiang[i].cX;
-              duixiang[i].y += duixiang[i].cY;
-              if(duixiang[i].x>w || duixiang[i].x<0){
-                  duixiang[i].cX = -duixiang[i].cX;
+         // console.log(duixiang[i])
+          Cricle(duixiang[i].x,duixiang[i].y,duixiang[i].R,duixiang[i].r,duixiang[i].g,duixiang[i].b);
+        //Cricle(duixiang[i].x,duixiang[i].y,duixiang[i].R,duixiang[i].CC);
+      }
+  };widthheight();//获取浏览器的等宽度等高
+
+  function Cricle(x,y,R,r,g,b){
+      ctx.save();//保存路径
+     if(Math.random()>0.991) {ctx.globalAlpha= 0.9;}//ctx.fillStyle = "#CCC";}//填充的背景颜色
+     else { ctx.globalAlpha=0.47;}
+
+    ctx.fillStyle = "rgb("+ r +","+ g +","+ b +")";
+      ctx.beginPath();//开始绘画
+    ctx.arc(x,y,R,Math.PI*2,0);//绘画圆 x y 半径（大小） 角度  一个PI 是180 * 2 = 360    真假 0/1 true/false
+      ctx.closePath();//结束绘画
+      ctx.fill();//填充背景颜色
+      ctx.restore();//回复路径
+  };Cricle();
+
+
+  !function draw(){
+      ctx.clearRect(0,0,w,h)//先清除画布上的点
+      for(var i = 0;i < num;i++){
+          duixiang[i].x += duixiang[i].cX;
+          duixiang[i].y += duixiang[i].cY;
+          if(duixiang[i].x>w || duixiang[i].x<0){
+              duixiang[i].cX = -duixiang[i].cX;
+          }
+          if(duixiang[i].y>h || duixiang[i].y<0){
+              duixiang[i].cY = -duixiang[i].cY;
+          }
+          Cricle(duixiang[i].x,duixiang[i].y,duixiang[i].R,duixiang[i].r,duixiang[i].g,duixiang[i].b);
+          //勾股定理判断两点是否连线
+          for(var j = i + 1;j < num;j++){
+              if( (duixiang[i].x-duixiang[j].x)*(duixiang[i].x-duixiang[j].x)+(duixiang[i].y-duixiang[j].y)*(duixiang[i].y-duixiang[j].y) <= 55*55 ){
+                  line(duixiang[i].x,duixiang[i].y,duixiang[j].x,duixiang[j].y,0,i,j)
               }
-              if(duixiang[i].y>h || duixiang[i].y<0){
-                  duixiang[i].cY = -duixiang[i].cY;
-              }
-              Cricle(duixiang[i].x,duixiang[i].y,duixiang[i].R,duixiang[i].r,duixiang[i].g,duixiang[i].b);
-              //勾股定理判断两点是否连线
-              for(var j = i + 1;j < num;j++){
-                  if( (duixiang[i].x-duixiang[j].x)*(duixiang[i].x-duixiang[j].x)+(duixiang[i].y-duixiang[j].y)*(duixiang[i].y-duixiang[j].y) <= 55*55 ){
-                      line(duixiang[i].x,duixiang[i].y,duixiang[j].x,duixiang[j].y,0,i,j)
-                  }
-                  if(move.x){
-                      if( (duixiang[i].x-move.x)*(duixiang[i].x-move.x)+(duixiang[i].y-move.y)*(duixiang[i].y-move.y) <= 100*100 ){
-                          line(duixiang[i].x,duixiang[i].y,move.x,move.y,1,i,1)
-                      }
+              if(move.x){
+                  if( (duixiang[i].x-move.x)*(duixiang[i].x-move.x)+(duixiang[i].y-move.y)*(duixiang[i].y-move.y) <= 100*100 ){
+                      line(duixiang[i].x,duixiang[i].y,move.x,move.y,1,i,1)
                   }
               }
           }
-          window.requestAnimationFrame(draw)
-      }();
-   
-      //绘制线条
-      function line(x1,y1,x2,y2,flag,i,j){
-          
-        if (flag){var color = ctx.createLinearGradient(x1,y1,x2,y2);
-                 ctx.globalAlpha=0.5;
-                 color.addColorStop(0,"rgb("+ duixiang[i].r +","+ duixiang[i].g +","+ duixiang[i].b +")");
-                 color.addColorStop(0.8,"#019ee5");
-                }
-              else
-              {
-              
-              var color = ctx.createLinearGradient(x1,y1,x2,y2);
-                 ctx.globalAlpha=0.9;
-                 color.addColorStop(0,"rgb("+ duixiang[i].r +","+ duixiang[i].g +","+ duixiang[i].b +")");
-                 color.addColorStop(1,"rgb("+ duixiang[j].r +","+ duixiang[j].g +","+ duixiang[j].b +")");
-              }
-          ctx.save();
-          ctx.strokeStyle = color;
-        ctx.lineWidth = 0.5;
-          ctx.beginPath();
-          ctx.moveTo(x1,y1);
-          ctx.lineTo(x2,y2);
-          ctx.stroke();
-          //ctx.restore();
       }
-   
-   
-      //document.onmousemove = function(e){
-       //   move.x = e.clientX;
-        //  move.y = e.clientY;
-      //}
-      //console.log(move)//去掉注释 ，可以与背景互动
-   
-      window.onresize = function(){
-          location.reload();
-      }
-  </script>
+      window.requestAnimationFrame(draw)
+  }();
+
+  //绘制线条
+  function line(x1,y1,x2,y2,flag,i,j){
+
+    if (flag){var color = ctx.createLinearGradient(x1,y1,x2,y2);
+             ctx.globalAlpha=0.5;
+             color.addColorStop(0,"rgb("+ duixiang[i].r +","+ duixiang[i].g +","+ duixiang[i].b +")");
+             color.addColorStop(0.8,"#019ee5");
+            }
+          else
+          {
+
+          var color = ctx.createLinearGradient(x1,y1,x2,y2);
+             ctx.globalAlpha=0.9;
+             color.addColorStop(0,"rgb("+ duixiang[i].r +","+ duixiang[i].g +","+ duixiang[i].b +")");
+             color.addColorStop(1,"rgb("+ duixiang[j].r +","+ duixiang[j].g +","+ duixiang[j].b +")");
+          }
+      ctx.save();
+      ctx.strokeStyle = color;
+      ctx.lineWidth = 0.5;
+      ctx.beginPath();
+      ctx.moveTo(x1,y1);
+      ctx.lineTo(x2,y2);
+      ctx.stroke();
+      //ctx.restore();
+  }
+
+
+  document.onmousemove = function(e){
+     move.x = e.clientX;
+     move.y = e.clientY;
+  };
+  //console.log(move)//去掉注释 ，可以与背景互动
+
+  window.onresize = function(){
+      location.reload();
+  }
+</script>
 </body>
 </html>

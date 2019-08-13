@@ -1,97 +1,84 @@
 .main{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-content: flex-start;
-  margin: 0;
+    margin: 0;
 }
-.a1{
-  height: 15vw;
-  width: 50%;
+#canvas {
+    position: fixed;
+    top: 0;
+    z-index: -1;
 }
-.a2{
-  width: 50%;
+.page{
+    display: flex;
+}
+.first_page_container{
+    margin: auto;
+    width: 80%;
 }
 .a3{
-  height: 10vw;;
-  width: 100%;
   font-size: 6.5vw;;
-  padding-left: 15vw;
   font-weight: 500;
 }
 .a4{
-  height: 16vw;;
-  width: 100%;
-  font-size: 2.5vw;;
+  font-size: 2.5vw;
   font-family: "仿宋";
-  padding-left: 18vw;
-  line-height: 10vw;;
+  line-height: 10vw;
   color: #5a5a5a;
 }
 .a5{
-  height: 10vw;
-  width: 100%;
   font-family: "楷体";
   font-size: 1.5vw;
   color: #636363;
-  padding-left: 16vw;
 }
 .b1{
-  height: 8vw;
+  padding: 24px 0 24px 0;
   width: 100%;
-  display: flex;
   align-content: flex-start;
   flex-direction: row;
-  padding-left: 20vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .b7{
-  height: 8vw;
-  width: 100%;
+  margin: 24px 0;
   display: flex;
-  align-content: flex-start;
-  flex-direction: row;
-  outline: none;
-  border: none;
-  
+  justify-content: center;
 }
 .c1{
-  font-size: 2.7vw;
+  font-size: 1.4vw;
   font-family: "宋体";
-  padding-top: 2.1vw;
 }
 .c2{
-  padding-left: 8vw;
-  padding-top: 0.8vw;
-}
-
-.c3{
-  padding-left: 35vw;
-  outline: none;  
-  border: none;
+  padding-left: 6vw;
 }
 input{
-  height: 3vw;
-  width: 45vw;
-  font-size: 1.8vw;
-  font-family: "仿宋";
+    width: 55vw;
+    font-size: 1.2vw;
+    font-family: "仿宋";
+    line-height: 2.7;
+    text-indent: .5em;
+    border-radius: 4px;
+    border: 1px solid #cccccc;
+    outline: none;
+    transition: all .2s;
+}
+input:focus {
+    border: 1px solid #000000;
 }
 select{
-  height: 3.8vw;
-  width: 45vw;
-  font-size: 1.8vw;
+  height: 56px;
+  display: block;
+  width: 55vw;
+  font-size: 1.6vw;
   font-family: "仿宋";
   text-align: center;
   text-align-last: center;
+  outline: none;
+  border-radius: 4px;
 }
-button{
-  height: 5vw;
-  width:30vw;
-  font-size: 2.5vw;
-  line-height: 2.5vw;
-  font-family: "楷体";
-  background: black;
+
+.input_field {
+    width: 80%;
+    margin: auto;
 }
 
 .a-fadein{
@@ -118,10 +105,7 @@ button{
 }
 
 
-.colorful {                                   /*颜色跑马灯*/
-  display: block;
-  width: 400px;
-  height: 10vw;
+.colorful {
   background-image: -webkit-linear-gradient(left, #3498db, #f47920 10%, #d71345 20%, #f7acbc 30%,
   #ffd400 40%, #3498db 50%, #f47920 60%, #d71345 70%, #f7acbc 80%, #ffd400 90%, #3498db);
   color: transparent;
@@ -140,12 +124,20 @@ button{
   }
 }
 
-.block{                 /*颜色覆盖渐变*/
+.block{
+  /*颜色覆盖渐变*/
+  display: block;
   color: #ffffff;
   position: relative;
   z-index: 1;
   outline: none;
   border: none;
+  line-height: 3.6;
+  font-size: 18px;
+  font-family: "黑体";
+  background: black;
+  border-radius: 5px;
+  padding: 0 6vw;
 }
 .block::before {
   content: "";
@@ -156,9 +148,10 @@ button{
   left: 0;
   right: 0;
   background: #B0E0E6;
-  transform-origin: center right;
+  transform-origin: center;
   transform: scaleX(0);
   transition: transform 0.2s linear;
+    border-radius: 5px;
 }
 .block:hover {
   cursor: pointer;
@@ -218,5 +211,44 @@ button{
   left: 5vw;
   height: 100%;
 }
-
+/* 手机屏幕 */
+@media screen and (max-width: 768px){
+    .first_page_container{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: auto;
+        height: 60vh;
+    }
+    .a3, .a4, .a5{
+        width: 100%;
+        text-align: center;
+    }
+    .a3 {
+        font-size: 18vw;
+    }
+    .a4 {
+        font-size: 7vw;
+    }
+    .a5{
+        font-size: 4vw;
+        line-height: 2;
+    }
+    .a5 span{
+        line-height: 2;
+        display: block;
+        text-align: center;
+    }
+    .b7 {
+        padding: 0 24px;
+    }
+    .block{
+        line-height: 3;
+        padding: 0 12vw;
+    }
+    select#want {
+        height: 36px;
+    }
+}
 
