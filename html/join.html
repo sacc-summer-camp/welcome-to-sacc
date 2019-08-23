@@ -22,70 +22,23 @@
           <div class="input_field">
               <div class="b1">
                   <div class="c1">姓名：</div>
-                  <div class="c2">
-                      <input
-                          onblur="checkInputCorrect(event)"
-                          type="text" id="name"
-                          placeholder="例）程大壮"
-                          pattern="^[\u4e00-\u9fa5]{0,5}$"
-                          min="2"
-                          max="5"
-                          required
-                      >
-                  </div>
+                  <div class="c2"><input onchange="review()" type="text" id="name" placeholder="例）程大壮" required></div>
               </div>
               <div class="b1">
                   <div class="c1">专业：</div>
-                  <div class="c2">
-                      <input
-                          onblur="checkInputCorrect(event)"
-                          type="text"
-                          id="major"
-                          placeholder="例）计算机科学与技术"
-                          pattern="^[\u4e00-\u9fa5]{0,15}$"
-                          min="0"
-                          max="5"
-                          required>
-                  </div>
+                  <div class="c2"><input onchange="review()" type="text" id="major" placeholder="例）计算机科学与技术" required></div>
               </div>
               <div class="b1">
                   <div class="c1">学号：</div>
-                  <div class="c2">
-                      <input
-                          onblur="checkInputCorrect(event)"
-                          type="text"
-                          id="num"
-                          placeholder="例）B19010101"
-                          pattern="^[A-Za-z]{1}[0-9]{8}$"
-                          required
-                      >
-                  </div>
+                  <div class="c2"><input onchange="review()" type="text" id="num" placeholder="例）B19010101" required></div>
               </div>
               <div class="b1">
                   <div class="c1">邮箱：</div>
-                  <div class="c2">
-                      <input
-                          onblur="checkInputCorrect(event)"
-                          type="email"
-                          id="email"
-                          placeholder="例）3159742702@qq.com"
-                          pattern="^[a-z0-9_.-]+@[da-z-.]+[da-z]$"
-                          required
-                      >
-                  </div>
+                  <div class="c2"><input onchange="review()" type="email" id="email" placeholder="例）3159742702@qq.com"></div>
               </div>
               <div class="b1">
                   <div class="c1">手机：</div>
-                  <div class="c2">
-                      <input
-                          onblur="checkInputCorrect(event)"
-                          type="tel"
-                          id="tel"
-                          placeholder="例）19812345678"
-                          pattern="^[0-9]{11}$"
-                          required
-                      >
-                  </div>
+                  <div class="c2"><input onchange="review()" type="tel" id="tel" placeholder="例）19812345678" required></div>
               </div>
               <div class="b1">
                   <div class="c1">部门：</div>
@@ -97,44 +50,100 @@
                       </select>
                   </div>
               </div>
-          </div>
-          <div class="b7">
-              <div class="c3" onclick="infoSubmit()"><button class="block" disabled="disabled">&emsp;加入我们！</button></div>
+              <div class="b7">
+                  <div class="c3" onclick="submit()"><button class="block">&emsp;加入我们！</button></div>
+              </div>
           </div>
       </div>
   </div>
   <script src="../js/gravity_canvas.js"></script>
   <script src="../js/fullpage.js"></script>
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
   <script type="text/javascript">
-      let checkState = 0;
-      var myFullpage = new fullpage('#fullpage', {
-          verticalCentered: false
-      });
-      function infoSubmit() {
-          if (checkState === 5) {
-
-          } else {
-
-          }
-          const inputField = document.querySelector(".input_field");
-          let inputList = [];
-           Array.from(inputField.children).forEach(item => {
-               inputList.push(item.children[1].firstChild);
-          });
-          const selectValue = inputList.pop().nextSibling.value;
-          const data = {};
-          data.name = inputList[0].value;
-          data.major = inputList[1].value;
-          data.number = inputList[2].value;
-          data.email = inputList[3].value;
-          data.phone = inputList[4].value;
-          data.department = selectValue;
+    var flag = true;
+    var reg0  = /^[A-Za-zd0-9]+([-_.][A-Za-zd]+)*@([A-Za-zd]+[-.])+[A-Za-zd]{2,5}$/;
+    var reg1 = new RegExp("[A-Za-z0-9]+$")
+    var person = {};
+    function review(){
+      flag = true
+      person = {
+        name:document.querySelector("#name").value,
+        major:document.querySelector("#major").value,
+        num:document.querySelector("#num").value,
+        email:document.querySelector("#email").value,
+        want:document.querySelector("#want").value,
+        tel:document.querySelector("#tel").value
       }
-      function checkInputCorrect(event) {
-          if (event.target.validity.valid) {
-              checkState++;
-          }
+      if (person.name==''){
+        flag = false
+        document.querySelector("#name").style.borderColor = "red"
       }
+      else{
+        flag = true
+        document.querySelector("#name").style.borderColor = "#cccccc"
+      }
+      if (person.major==''){
+        flag = false
+        document.querySelector("#major").style.borderColor = "red"
+      }
+      else{
+        flag = true
+        document.querySelector("#major").style.borderColor = "#cccccc"
+      }
+      if (person.num==''){
+        flag = false
+        document.querySelector("#num").style.borderColor = "red"
+      }
+      else{
+        flag = true
+        document.querySelector("#num").style.borderColor = "#cccccc"
+      }
+      if (person.tel==''){
+        flag = false
+        document.querySelector("#tel").style.borderColor = "red"
+      }
+      else{
+        flag = true
+        document.querySelector("#tel").style.borderColor = "#cccccc"
+      }
+      if (person.email==''){
+        flag = false
+        document.querySelector("#email").style.borderColor = "red"
+      }
+      else{
+        flag = true
+        document.querySelector("#email").style.borderColor = "#cccccc"
+      }
+      console.log(flag)
+    }
+    function submit() {
+      review();
+      if(flag){
+        $.ajax({
+          url:'http://192.168.43.80:8080/api/register',
+          type:'post',
+          headers:{'Content-Type':'application/json'},
+          data:JSON.stringify({
+            "name":person.name,
+            "number":person.num,
+            "phone":person.tel,
+            "major":person.major,
+            "email":person.email,
+            "department":person.want
+          }),
+          dataType:'json',
+          success:function (res) {
+            alert(res.data)
+          },
+          error:function (err) {
+            alert(err.responseText)
+          }
+        })
+      }
+    }
+    var myFullpage = new fullpage('#fullpage', {
+      verticalCentered: false
+    });
   </script>
 </body>
 </html>
