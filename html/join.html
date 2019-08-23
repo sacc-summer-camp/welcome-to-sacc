@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Join us</title>
+    <title>申请加入</title>
     <link rel="stylesheet" type="text/css" href="../css/join.css">
     <link rel="stylesheet" href="../css/fullpage.css">
 </head>
@@ -22,23 +22,70 @@
           <div class="input_field">
               <div class="b1">
                   <div class="c1">姓名：</div>
-                  <div class="c2"><input type="text" id="name" placeholder="例）程大壮" required></div>
+                  <div class="c2">
+                      <input
+                          onblur="checkInputCorrect(event)"
+                          type="text" id="name"
+                          placeholder="例）程大壮"
+                          pattern="^[\u4e00-\u9fa5]{0,5}$"
+                          min="2"
+                          max="5"
+                          required
+                      >
+                  </div>
               </div>
               <div class="b1">
                   <div class="c1">专业：</div>
-                  <div class="c2"><input type="text" id="major" placeholder="例）计算机科学与技术" required></div>
+                  <div class="c2">
+                      <input
+                          onblur="checkInputCorrect(event)"
+                          type="text"
+                          id="major"
+                          placeholder="例）计算机科学与技术"
+                          pattern="^[\u4e00-\u9fa5]{0,15}$"
+                          min="0"
+                          max="5"
+                          required>
+                  </div>
               </div>
               <div class="b1">
                   <div class="c1">学号：</div>
-                  <div class="c2"><input type="text" id="num" placeholder="例）B19010101" required></div>
+                  <div class="c2">
+                      <input
+                          onblur="checkInputCorrect(event)"
+                          type="text"
+                          id="num"
+                          placeholder="例）B19010101"
+                          pattern="^[A-Za-z]{1}[0-9]{8}$"
+                          required
+                      >
+                  </div>
               </div>
               <div class="b1">
                   <div class="c1">邮箱：</div>
-                  <div class="c2"><input type="email" id="email" placeholder="例）3159742702@qq.com"></div>
+                  <div class="c2">
+                      <input
+                          onblur="checkInputCorrect(event)"
+                          type="email"
+                          id="email"
+                          placeholder="例）3159742702@qq.com"
+                          pattern="^[a-z0-9_.-]+@[da-z-.]+[da-z]$"
+                          required
+                      >
+                  </div>
               </div>
               <div class="b1">
                   <div class="c1">手机：</div>
-                  <div class="c2"><input type="tel" id="tel" placeholder="例）19812345678" required></div>
+                  <div class="c2">
+                      <input
+                          onblur="checkInputCorrect(event)"
+                          type="tel"
+                          id="tel"
+                          placeholder="例）19812345678"
+                          pattern="^[0-9]{11}$"
+                          required
+                      >
+                  </div>
               </div>
               <div class="b1">
                   <div class="c1">部门：</div>
@@ -50,21 +97,44 @@
                       </select>
                   </div>
               </div>
-              <div class="b7">
-                  <div class="c3"><button class="block">&emsp;加入我们！</button></div>
-              </div>
+          </div>
+          <div class="b7">
+              <div class="c3" onclick="infoSubmit()"><button class="block" disabled="disabled">&emsp;加入我们！</button></div>
           </div>
       </div>
-  </div>
-  <div id="beside">
-      ©2019 Science Association of Computer College All Rights Reserved.
   </div>
   <script src="../js/gravity_canvas.js"></script>
   <script src="../js/fullpage.js"></script>
   <script type="text/javascript">
+      let checkState = 0;
       var myFullpage = new fullpage('#fullpage', {
           verticalCentered: false
       });
+      function infoSubmit() {
+          if (checkState === 5) {
+
+          } else {
+
+          }
+          const inputField = document.querySelector(".input_field");
+          let inputList = [];
+           Array.from(inputField.children).forEach(item => {
+               inputList.push(item.children[1].firstChild);
+          });
+          const selectValue = inputList.pop().nextSibling.value;
+          const data = {};
+          data.name = inputList[0].value;
+          data.major = inputList[1].value;
+          data.number = inputList[2].value;
+          data.email = inputList[3].value;
+          data.phone = inputList[4].value;
+          data.department = selectValue;
+      }
+      function checkInputCorrect(event) {
+          if (event.target.validity.valid) {
+              checkState++;
+          }
+      }
   </script>
 </body>
 </html>
