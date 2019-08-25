@@ -10,6 +10,9 @@
     display: flex;
     flex-wrap: wrap;
 }
+.section{
+    height: 100vh;
+}
 .first_page_container{
     margin: auto;
     width: 80%;
@@ -52,14 +55,16 @@
 .c2{
   padding-left: 6vw;
 }
-input:invalid{
-    border: 1px solid rgba(255, 0, 0, .4);
-    background-color: rgba(255, 0, 0, .3);
+input:required{
+    background-color: #ffffff;
 }
-input:valid{
-    border: 1px solid rgba(0, 255, 0, .4);
-    background-color: rgba(0, 255, 0, .3);
+input:focus:invalid {
+    background-color: hsla(0, 90%, 70%, 1);
 }
+input:valid {
+    background: hsla(100, 90%, 70%, 1);
+}
+
 input{
     width: 55vw;
     font-size: 1.2vw;
@@ -71,6 +76,10 @@ input{
     background-color: #ffffff;
     outline: none;
     transition: all .2s;
+}
+input:valid:after{
+    content: '你好';
+    font-size: 100px;
 }
 input:focus {
     border: 1px solid #000000;
